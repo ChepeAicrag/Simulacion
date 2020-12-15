@@ -2,6 +2,9 @@
 \usepackage{graphicx}
 \usepackage[spanish]{babel}
 \renewcommand{\baselinestretch}{1.5}
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+\bibliography{bibliography}
+
 
 \begin{document}
 	
@@ -17,7 +20,6 @@
 		\vspace{3cm}
 		{\scshape\Huge Simulación de Difusión En Redes Sociales \par}
 		\vspace{3cm}
-		{\itshape\Large Proyecto de Simulación \par}
 		\vfill
 		{\Large Autor: \par}
 		{\Large José Ángel García García \par}
@@ -31,21 +33,34 @@
 \section{Introducción}
  
  \subsection{Planteamiento del problema}
- Las redes sociales son el medio de comunicaicón que predominan actualmente, Se han incorporado a nuestras vida hasta un nivel en el que no somos capaces de asumir que dependemos de ellas o que hacemos uso de estas, por más minimo que sea, le terminamos dando un uso. Entonces podemos decir que las redes sociales son tan influyentes en nuestras vidas que en ocasiones pareciera que nos manipularan.
+ Las redes sociales son el medio de comunicación que predominan actualmente, se han incorporado a nuestras vida hasta un grado en el que no somos capaces de asumir que dependemos de ellas o que hacemos una gran inversión de tiempo en ellas, por más minimo que sea el tiempo por día, sumado semanalmente da un valor de tiempo elevado. Entonces podemos decir que las redes sociales son parte de nuestra vida, de nuestro día a día, es tan común, leer noticias, compartir información con contactos e inclusive comunicarse con nuestros familiares cercanos; lo hacemos a diario y ya no nos vemos como consumidores de una red social.
   
- Hoy en día el término “red social " es muy empleado llamándose así a los diferentes sitios o páginas de internet que ofrecen registrarse a las personas y contactarse con infinidad de individuos a fin  de compartir contenidos, interactuar y crear comunidades sobre intereses similares: trabajo lecturas, amistad, juegos, relaciones amorosas, entre otros.
+ Hoy en día el término “red social" es muy empleado llamándose así a los diferentes sitios o páginas de internet que ofrecen registrarse a las personas y contactarse con infinidad de individuos a fin  de compartir contenidos, interactuar y crear comunidades sobre intereses similares: trabajo lecturas, amistad, juegos, relaciones amorosas, entre otros.
+
+ En Boyd y Ellison, definieron a las redes sociales como "Las redes sociales son una estructura social que se puede representar en forma de uno o varios grafos, en los cuales, los nodos representan a individuos (a veces denominados actores) y las aristas, relaciones entre ellos. Las relaciones pueden ser de distinto tipo, como intercambios financieros, amistad, relaciones sexuales o rutas aéreas. También es el medio de interacción de distintas personas, como por ejemplo, juegos en línea, chats, foros, spaces, entre otros. Las redes sociales facilitan en gran medida esta interacción, pueden clasificarse en redes sociales personales, que agrupan a un conjunto de contactos y amigos con intereses en común, y redes sociales profesionales, redes que se centran más en la creación de contactos profesionales afines a cada usuario."\cite{definition:redsocial}. 
  
+ Como sociedad que somos, nuestra forma de actuar y comportarnos está influenciada por otros individuos,es decir, existen individuos que influyen sobre otros para realizar determinadas acciones. La información, conocimiento, valores, tradiciones, culturas, etc., a tal grado que se crea una especie de tejido social.
+   
  \subsection{Defincion del sistema}
+
  
 \section{Diseño del Modelo}
  
  \subsection{Formulación del modelo}
+  Una red social, como lo menciona Boyd y Elison se puede modelar como un gráfico con vértices que representan a los usuarios y bordes que representan los enlaces entre los usuarios. El proceso en cascada en la red se realiza bajo un modelo de difusión especificado.
+ “El problema de IM se define como encontrar k nodos semilla en la red como la fuente de  propagación de información de modo que, bajo la difusión especificada en el modelo, la escala  de la cascada se maximiza” (Domingos \& Richardson, 2001, pág. 24).
+ 
+ Flaviano y Hernan A, mapearon la información difundida en las redes sociales en una  filtración óptima y presentaron un algoritmo, llamado influencia colectiva (IC), basado en la  conexión débil entre los nodos para identificar el conjunto mínimo de influenciadores. En base a  esta información, los autores aprovechan el comportamiento de los usuarios en redes reales,  incluidos Twitter, Facebook, APS y LiveJournal, y utilizan el algoritmo de CI para localizar  difusores influyentes. “Los resultados experimentales muestran que el conjunto óptimo de semillas es mucho más pequeño que el obtenido por otras medidas” (Flaviano \& Hernan,2015, pág 10).
+ 
+ La sinergia es un fenómeno omnipresente en los sistemas sociales. Muchos estudios han encontrado que “la sinergia aumenta la probabilidad de transmisión entre un par de nodos y promueve la propagación de explosivos” (Wang, Tang, Stanley, \& Braunstei, 2018, pág. 30). Por ejemplo, en términos de información difundida en las redes sociales, un mensaje transmitido por un grupo de usuarios conectados es más creíble que un mensaje transmitido por un individuo, para incorporar esto conceptos se creó el modelo de difusión llamado modelo de cascada de tres pasos basado en sinergismo (TSSCM) basado en el análisis anterior y la teoría de la influencia
+ de tres grados.
  \subsection{Explicación del modelo}
  
 \section{Recolección de Datos}
  
  \subsection{Recolección}
  \subsection{Análisis de Datos}	
+	
 	
 \section{Construcción del Modelo}
 
@@ -54,6 +69,8 @@
 \section{Conclusiones}
 	
 	
-	
-	
-	\end{document}
+\section{Referencias}
+
+\printbibliography
+
+\end{document}

@@ -1,13 +1,28 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {spanish}{}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Introducción}{2}{}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1}Planteamiento del problema}{2}{}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2}Defincion del sistema}{3}{}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Diseño del Modelo}{3}{}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Formulación del modelo}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Explicación del modelo}{3}{}%
-\contentsline {section}{\numberline {3}Recolección de Datos}{3}{}%
-\contentsline {subsection}{\numberline {3.1}Recolección}{3}{}%
-\contentsline {subsection}{\numberline {3.2}Análisis de Datos}{3}{}%
-\contentsline {section}{\numberline {4}Construcción del Modelo}{3}{}%
-\contentsline {section}{\numberline {5}Validación}{3}{}%
-\contentsline {section}{\numberline {6}Conclusiones}{3}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Explicación del modelo}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Recolección de Datos}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Recolección}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Análisis de Datos}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Construcción del Modelo}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Validación}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Conclusiones}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Referencias}{4}{}%
