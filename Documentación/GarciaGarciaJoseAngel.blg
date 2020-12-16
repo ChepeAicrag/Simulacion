@@ -22,47 +22,93 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: GarciaGarciaJoseAngel-blx.bib
 Database file #2: bibliography.bib
+Warning--entry type for "cite:36" isn't style-file defined
+--line 45 of file bibliography.bib
+I was expecting a `,' or a `}'---line 47 of file bibliography.bib
+ :   
+ :   title = {Cascade dynamics of multiplex propagation.}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Biblatex version: 3.15
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2701 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2707 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2711 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2711 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2715 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2721 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2725 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2725 of file biblatex.bst
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 2 entries,
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2813 of file biblatex.bst
+You've used 7 entries,
             6393 wiz_defined-function locations,
-            1207 strings with 9196 characters,
-and the built_in function-call counts, 9417 in all, are:
-= -- 610
-> -- 410
-< -- 33
-+ -- 355
-- -- 285
-* -- 597
-:= -- 1272
+            1230 strings with 9839 characters,
+and the built_in function-call counts, 42759 in all, are:
+= -- 3198
+> -- 1063
+< -- 138
++ -- 994
+- -- 643
+* -- 3206
+:= -- 4779
 add.period$ -- 0
-call.type$ -- 2
-change.case$ -- 7
-chr.to.int$ -- 66
-cite$ -- 2
-duplicate$ -- 494
-empty$ -- 843
-format.name$ -- 44
-if$ -- 1822
+call.type$ -- 7
+change.case$ -- 38
+chr.to.int$ -- 90
+cite$ -- 12
+duplicate$ -- 2765
+empty$ -- 4246
+format.name$ -- 284
+if$ -- 8807
 int.to.chr$ -- 0
-int.to.str$ -- 2
+int.to.str$ -- 12
 missing$ -- 0
-newline$ -- 43
-num.names$ -- 38
-pop$ -- 375
+newline$ -- 140
+num.names$ -- 228
+pop$ -- 2076
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 59
 quote$ -- 0
-skip$ -- 244
+skip$ -- 1013
 stack$ -- 0
-substring$ -- 1457
-swap$ -- 133
-text.length$ -- 48
+substring$ -- 7407
+swap$ -- 639
+text.length$ -- 155
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 56
+type$ -- 225
 warning$ -- 0
-while$ -- 125
+while$ -- 399
 width$ -- 0
-write$ -- 42
+write$ -- 134
+(There were 20 error messages)

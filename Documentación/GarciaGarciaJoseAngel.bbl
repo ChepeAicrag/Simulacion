@@ -41,5 +41,111 @@
     \field{urlmonth}{12}
     \field{urlyear}{2020}
   \endentry
+
+  \entry{cite:problemaIM}{article}{}
+    \name{author}{1}{}{%
+      {{hash=DPRMM}{%
+         family={Domingos\bibnamedelima P},
+         familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+         given={Richardson M\bibnamedelima Mining.},
+         giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DPRMM1}
+    \strng{fullhash}{DPRMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{57–66}
+    \field{title}{The network value of customers. Proceedings of the seventh
+  ACM SIGKDD international conference on Knowledge discovery and data mining.}
+    \field{year}{2001}
+  \endentry
+
+  \entry{cite:semillas}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MFMHA}{%
+         family={Morone\bibnamedelima Flaviano},
+         familyi={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={Makse Hernan\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MFMHA1}
+    \strng{fullhash}{MFMHA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{65–75}
+    \field{title}{Influence maximization in complex networks through optimal
+  percolation. Nature}
+    \field{year}{2015}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{cite:sinergia}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WWTMSHE}{%
+         family={Wang\bibnamedelima Wei},
+         familyi={W\bibinitperiod\bibinitdelim W\bibinitperiod},
+         given={Tang Ming. Stanley H.\bibnamedelima Eugene},
+         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  S\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=ABL}{%
+         family={A.},
+         familyi={A\bibinitperiod},
+         given={Braunstei\bibnamedelima Lidia},
+         giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WWTMSHEABL1}
+    \strng{fullhash}{WWTMSHEABL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{98}
+    \field{title}{Social contagions with communication channel alternation on
+  multiplex networks.}
+    \field{year}{2018}
+  \endentry
+
+  \entry{cite:36}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=CDMEVMMMW}{%
+         family={Centola D\bibnamedelima M},
+         familyi={C\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+         suffix={Macy M\bibnamedelima W},
+         suffixi={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+         given={Eguıluz V\bibnamedelima M.},
+         giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CDMMMWEVM1}
+    \strng{fullhash}{CDMMMWEVM1}
+    \field{labelnamesource}{author}
+  \endentry
+
+  \entry{data:01}{online}{}
+    \name{author}{1}{}{%
+      {{hash=RN}{%
+         family={Repository},
+         familyi={R\bibinitperiod},
+         given={Network},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RN1}
+    \strng{fullhash}{RN1}
+    \field{labelnamesource}{author}
+    \verb{url}
+    \verb http://networkrepository.com/
+    \endverb
+    \field{urlday}{16}
+    \field{urlmonth}{11}
+    \field{urlyear}{2020}
+  \endentry
 \enddatalist
 \endinput
