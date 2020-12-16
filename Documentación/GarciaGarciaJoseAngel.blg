@@ -29,6 +29,14 @@ I was expecting a `,' or a `}'---line 47 of file bibliography.bib
  :   title = {Cascade dynamics of multiplex propagation.}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--entry type for "cite:30" isn't style-file defined
+--line 52 of file bibliography.bib
+Warning--entry type for "cite:12" isn't style-file defined
+--line 59 of file bibliography.bib
+I was expecting an "="---line 62 of file bibliography.bib
+ :   in 
+ :      Proc. ACM SIGKDD Int. Conf. Knowl.Discovery Data Mining.
+I'm skipping whatever remains of this entry
 Biblatex version: 3.15
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
@@ -39,21 +47,69 @@ Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a
 while executing---line 2697 of file biblatex.bst
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
 while executing---line 2697 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2697 of file biblatex.bst
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
 while executing---line 2701 of file biblatex.bst
-Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2701 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2701 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
 while executing---line 2707 of file biblatex.bst
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2707 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2707 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2711 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
 while executing---line 2711 of file biblatex.bst
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
 while executing---line 2711 of file biblatex.bst
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2711 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2711 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2711 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
 while executing---line 2715 of file biblatex.bst
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2715 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2715 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
 while executing---line 2721 of file biblatex.bst
+Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2721 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2721 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2725 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2725 of file biblatex.bst
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
 while executing---line 2725 of file biblatex.bst
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
+while executing---line 2725 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2725 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
 while executing---line 2725 of file biblatex.bst
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
@@ -70,45 +126,73 @@ Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a
 while executing---line 2813 of file biblatex.bst
 Name 1 in "Wang Wei, Tang Ming. Stanley H. Eugene, and Braunstei Lidia A." has a comma at the end for entry cite:sinergia
 while executing---line 2813 of file biblatex.bst
-You've used 7 entries,
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+You've used 9 entries,
             6393 wiz_defined-function locations,
-            1230 strings with 9839 characters,
-and the built_in function-call counts, 42759 in all, are:
-= -- 3198
-> -- 1063
-< -- 138
-+ -- 994
-- -- 643
-* -- 3206
-:= -- 4779
+            1237 strings with 10065 characters,
+and the built_in function-call counts, 55069 in all, are:
+= -- 4128
+> -- 1261
+< -- 180
++ -- 1232
+- -- 719
+* -- 4149
+:= -- 6094
 add.period$ -- 0
-call.type$ -- 7
-change.case$ -- 38
+call.type$ -- 9
+change.case$ -- 51
 chr.to.int$ -- 90
-cite$ -- 12
-duplicate$ -- 2765
-empty$ -- 4246
-format.name$ -- 284
-if$ -- 8807
+cite$ -- 16
+duplicate$ -- 3835
+empty$ -- 5442
+format.name$ -- 410
+if$ -- 11393
 int.to.chr$ -- 0
-int.to.str$ -- 12
+int.to.str$ -- 16
 missing$ -- 0
-newline$ -- 140
-num.names$ -- 228
-pop$ -- 2076
+newline$ -- 185
+num.names$ -- 304
+pop$ -- 2776
 preamble$ -- 1
-purify$ -- 59
+purify$ -- 84
 quote$ -- 0
-skip$ -- 1013
+skip$ -- 1340
 stack$ -- 0
-substring$ -- 7407
-swap$ -- 639
-text.length$ -- 155
+substring$ -- 9296
+swap$ -- 849
+text.length$ -- 201
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 225
+type$ -- 291
 warning$ -- 0
-while$ -- 399
+while$ -- 539
 width$ -- 0
-write$ -- 134
-(There were 20 error messages)
+write$ -- 177
+(There were 59 error messages)

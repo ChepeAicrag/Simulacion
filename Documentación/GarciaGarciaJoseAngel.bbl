@@ -128,6 +128,52 @@
     \field{labelnamesource}{author}
   \endentry
 
+  \entry{cite:12}{misc}{}
+    \name{author}{2}{}{%
+      {{hash=KDKJ}{%
+         family={Kempe\bibnamedelima D.},
+         familyi={K\bibinitperiod\bibinitdelim D\bibinitperiod},
+         given={Kleinberg\bibnamedelima J.},
+         giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=ET}{%
+         family={E.},
+         familyi={E\bibinitperiod},
+         given={Tardos},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KDKJET1}
+    \strng{fullhash}{KDKJET1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Maximizing the spread of influence through a social network.}
+  \endentry
+
+  \entry{cite:30}{misc}{}
+    \name{author}{2}{}{%
+      {{hash=ZMLL}{%
+         family={Zheng\bibnamedelima Muhua},
+         familyi={Z\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Linyuan\bibnamedelima Lu¨},
+         giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zhao.},
+         familyi={Z\bibinitperiod},
+         given={Ming},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZMLLZM1}
+    \strng{fullhash}{ZMLLZM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Spreading in online social networks: The role of social
+  reinforcement.}
+    \field{year}{2013}
+  \endentry
+
   \entry{data:01}{online}{}
     \name{author}{1}{}{%
       {{hash=RN}{%
