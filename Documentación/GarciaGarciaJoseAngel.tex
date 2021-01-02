@@ -45,7 +45,7 @@
  \subsection{Definición del sistema}
 La información que viaja y fluye en una red social a través de diferentes medios puede ser: publicidad, publicaciones, fotos y vídeos, etc., se expande de forma exponencial, primeramente con ayuda de un pequeño grupo de personas influyentes; existen personas con un estatus de aceptación mayor que otras, es decir, personas líderes de opinión que gracias a estos, hacen que se propage la información entre los individuos haciendo que incremente el grado de difusión.
 
-En este documento se plantea estudiar el comportamiento de la difusión de información. Exactamente se plantea que el sistema sea capaz de simular la sinergía del flujo de la información en las redes sociales. Un modelo de difusión razonable que pueda simular con precisión la propagación de información en las redes sociales es el paso clave para resolver eficazmente el problema de la mensajería instantánea
+En este documento se plantea estudiar el comportamiento de la difusión de información. Exactamente se plantea que el sistema sea capaz de simular la sinergía del flujo de la información en las redes sociales. Un modelo de difusión razonable que pueda simular con precisión la propagación de información en las redes sociales es el paso clave para resolver eficazmente el problema de la maximización de influencia
  
 \section{Diseño del Modelo}
  
@@ -91,14 +91,14 @@ Como se muestra en la \ref{Fig:01}, en el paso $t$, el nodo $1$ es una semilla y
 Dado un conjunto de semillas $S$, usamos $\sigma_{TSSCM}(S)$ para representar la influyente de $S$, que puede cuantificarse como el número de nodos activados bajo $TSSCM$ cuando finaliza el proceso de propagación. \\
 El problema de IM bajo $TSSCM$ se define como: \\
 
-\textbf{Definición 1} Data una red $G = (V, E)$, el problema de mensajería instantanea en $TSSCM$ tiene como objetivo el subconjutno de $S^* \subseteq V, |S^*|= K$ tal que: 
+\textbf{Definición 1} Dada una red $G = (V, E)$, el problema de mensajería instantanea en $TSSCM$ tiene como objetivo encontrar el subconjutno de $S^* \subseteq V, |S^*|= K$ tal que: 
 \begin{equation}
 	\centering
 	S^* = arg_smax\sigma_{TSSCM}(S)
 \end{equation}
 Kempe y col \cite{cite:12} han demostrado que el problema de IM es NP-hard utilizando el problema de máxima cobertura. Basados en esta prueba, consideramos un método de reducción similar y probamos que el problema de IM bajo TSSCM es NP-hard.
 
-La solución óptima del problema de mensajería instantánea en TSSCM puede ser aproximada por los codiciosos algoritmo,  $Greedy(G, \sigma_{TSSCN}(S), k)$, como se muestra en el algoritmo \ref{algoritmo:Algoritmo 1}.\\
+La solución óptima del problema de maximización de influencia en TSSCM puede ser aproximada por los codiciosos algoritmo,  $Greedy(G, \sigma_{TSSCN}(S), k)$, como se muestra en el algoritmo \ref{algoritmo:Algoritmo 1}.\\
 
 \begin{algorithm}[h]
 	\label{algoritmo:Algoritmo 1}
