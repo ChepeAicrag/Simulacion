@@ -9,13 +9,26 @@ from Profile import *
 from Threshold import * 
 from MakeGrap import *
 
+
+import matplotlib.pyplot as plt 
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas 
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar 
+
+
+
 def execution(if_seed, profile, threshold, p, a, g, name):
     m1, t1, it1 = make_pt_graph_simulation(if_seed, profile, threshold, p, a, g)
     m2, t2 = make_p_graph_simulation(if_seed, profile, p, a, g)
     m3, t3 = make_t_graph_simulation(if_seed, threshold, p, a, g)
-    viz = DiffusionTrendComparison([m1, m2, m3],[t1, t2, t3])
+    figure = plt.figure() 
+    canvas = FigureCanvas(figure) 
+    ax = figure.add_subplot(221)
+    #viz.plot(plt=ax, filename=name)
+    viz = DiffusionTrendComparison([m1, m2, m3],[t1, t2, t3], plt = ax)
     viz.plot(filename=name)
-
+    #figure.show()
+    canvas.draw()
+    
 # Graficas para Diffusion trends for the Barabasi Alberth graph
 def test01():
     execution(0.05, 0.1, 0.1, 0, 0, 1, "Fig 1 a).png")
@@ -53,6 +66,7 @@ def test31(g):
     # print("Figura 4 - e) Generated")
     execution(0.05, 0.8, 0.2, 0, 0, g, "Fig 4 f).png")
     print("Figura 4 - f) Generated")
+
 # Main
 
 
