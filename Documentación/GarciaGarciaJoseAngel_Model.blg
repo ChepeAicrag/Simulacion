@@ -1,0 +1,160 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: GarciaGarciaJoseAngel_Model.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: biblatex.bst
+Reallocating 'name_of_file' (item size: 1) to 32 items.
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: GarciaGarciaJoseAngel_Model-blx.bib
+Database file #2: bibliography.bib
+Warning--entry type for "cite:36" isn't style-file defined
+--line 45 of file bibliography.bib
+I was expecting a `,' or a `}'---line 47 of file bibliography.bib
+ :   
+ :   title = {Cascade dynamics of multiplex propagation.}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "cite:30" isn't style-file defined
+--line 52 of file bibliography.bib
+Warning--entry type for "cite:12" isn't style-file defined
+--line 59 of file bibliography.bib
+I was expecting an "="---line 62 of file bibliography.bib
+ :   in 
+ :      Proc. ACM SIGKDD Int. Conf. Knowl.Discovery Data Mining.
+I'm skipping whatever remains of this entry
+Biblatex version: 3.15
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2697 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2701 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2701 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2707 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2707 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2711 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2711 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2711 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2711 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2715 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2715 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2721 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2721 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2725 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2725 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2725 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2725 of file biblatex.bst
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+while executing---line 2813 of file biblatex.bst
+You've used 5 entries,
+            6393 wiz_defined-function locations,
+            1214 strings with 9355 characters,
+and the built_in function-call counts, 26674 in all, are:
+= -- 1920
+> -- 679
+< -- 92
++ -- 676
+- -- 382
+* -- 1866
+:= -- 3101
+add.period$ -- 0
+call.type$ -- 5
+change.case$ -- 23
+chr.to.int$ -- 66
+cite$ -- 8
+duplicate$ -- 1999
+empty$ -- 2543
+format.name$ -- 215
+if$ -- 5466
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 0
+newline$ -- 101
+num.names$ -- 152
+pop$ -- 1430
+preamble$ -- 1
+purify$ -- 41
+quote$ -- 0
+skip$ -- 718
+stack$ -- 0
+substring$ -- 4093
+swap$ -- 403
+text.length$ -- 112
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 155
+warning$ -- 0
+while$ -- 321
+width$ -- 0
+write$ -- 97
+(There were 40 error messages)
