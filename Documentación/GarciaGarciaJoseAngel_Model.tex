@@ -1,10 +1,19 @@
 \documentclass{article}
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage[spanish, es-tabla]{babel}
 \renewcommand{\baselinestretch}{1.5}
 \usepackage[backend=bibtex,sorting=none]{biblatex}
 \bibliography{bibliography}
-\usepackage{algpseudocode}
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithm}
+
+
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+\algnewcommand\algorithmicyield{\textbf{yield}}
+\algnewcommand\yield{\item[\algorithmicyield]}
 
 \begin{document}
 		
@@ -30,110 +39,184 @@
 \newpage
 	
 \section{Introducción}
- La información, las ideas, los virus, todos ellos tienen algo en común: describen diferentes tipos de “contenidos” que necesitan ser vinculaos por agentes interactuantes para difundirse. Estos agentes pueden ser animales, personas o cualquier otro ser vivo, inclusive una computadora o dispositivos tecnologicos conectados por una red compleja que describe sus relaciones. Los procesos de difusión presentan caracteristicas que afectan la forma en que evolucionan, una de esas caracteristicas es el \textbf{grado de actividad} de sus agentes, donde esto puede ser \textbf{pasivo} y \textbf{activo}, aunque en algunos casos pueden tomar ambos comportamientos. Además, en determinadas circuntancias, un contenido puede necesitar tatno de un cierto grado de exposición de los actores como su interes para ser tomado en cuenta.
+ La información, las ideas, los virus, todos ellos tienen algo en común: describen diferentes tipos de “contenidos” que necesitan ser vinculaos por agentes interactuantes para difundirse. Estos agentes pueden ser animales, personas o cualquier otro ser vivo, inclusive una computadora o dispositivos tecnológicos conectados por una red compleja que describe sus relaciones. Los procesos de difusión presentan características que afectan la forma en que evolucionan, una de esas características es el \textbf{grado de actividad} de sus agentes, donde esto puede ser \textbf{pasivo} y \textbf{activo}, aunque en algunos casos pueden tomar ambos comportamientos. Además, en determinadas circunstancias, un contenido puede necesitar tanto de un cierto grado de exposición de los actores como su interés para ser tomado en cuenta.
  \\
- La distinción de actividad se refiere a fenomenos de contagio social, donde el objeto de difusión o difuso es una idea o un dato. Los contagios sociales se suelen modelar utilizando un enfoque clásico con el modelo \textbf{Threshold} introducido por Granovetter en 1978.
- Este modelo, la adpción de ideas o información por un individuo está sujeta a un umbral personal, además que tienden a considerar solo el componente pasivo de la difusión, ignorando los intereses del usuario en relación con la información. 
- Sabemos que la presión en grupo en la mayoría de agentes puede ser un factor para la adopciónd de información, pero hay casos en los que el interes personal es más relevante, un impulso activo, que una vez el agente es consciente de la existencia de la información, sin tener en cuenta la presión de su exterior u otros agentes puede aceptar$\\$ declinar el proceso de difusión.
+ La distinción de actividad se refiere a fenómenos de contagio social, donde el objeto de difusión o difuso es una idea o un dato. Los contagios sociales se suelen modelar utilizando un enfoque clásico con el modelo \textbf{Threshold} introducido por Granovetter en 1978 \cite{granovetter:1978}.
+ Este modelo, la adopción de ideas o información por un individuo está sujeta a un umbral personal, además que tienden a considerar solo el componente pasivo de la difusión, ignorando los intereses del usuario en relación con la información.
+ Sabemos que la presión en grupo en la mayoría de agentes puede ser un factor para la adopción de información, pero hay casos en los que el interés personal es más relevante, un impulso activo, que una vez el agente es consciente de la existencia de la información, sin tener en cuenta la presión de su exterior u otros agentes puede aceptar o declinar el proceso de difusión.
  \\
- Actualmente, no existen modelos que consideren a los usuarios activos y pasivos en al difusión de una red. Y en el mundo real, los usuarios tienen este comportamiento, por ejemplo, algunas personas que deciden de forma autónoma adoptar una idea o información sin la presión de sus amigos y otras que deciden no adoptar esas ideas. Entonces, en este trabajo, modelamos también el fenómeno de adopción espontánea y la presencia de nodos bloqueados. Una distición simple que se realiza en el presente documento, es que el modelado \textbf{pasivo} se trabaja mediante reglas de difusión deterministas(umbrales individuales que limitan los fenomenos de presión de grupo) y \textbf{activo} a través de probabilisticos (perfiles individuales que dependen unicamente del interés del sujeto en el contenido o información)
+ Actualmente, no existen modelos que consideren a los usuarios activos y pasivos en al difusión de una red. Y en el mundo real, los usuarios tienen este comportamiento, por ejemplo, algunas personas que deciden de forma autónoma adoptar una idea o información sin la presión de sus amigos y otras que deciden no adoptar esas ideas. Entonces, en este trabajo, modelamos también el fenómeno de adopción espontánea y la presencia de nodos bloqueados. Una distinción simple que se realiza en el presente documento, es que el modelado \textbf{pasivo} se trabaja mediante reglas de difusión deterministas(umbrales individuales que limitan los fenómenos de presión de grupo) y \textbf{activo} a través de probabilísticos (perfiles individuales que dependen únicamente del interés del sujeto en el contenido o información).
  \subsection{Planteamiento del problema}
-Los procesos de difusión se pueden dividir en tres componentes: (i) la población sobre la que se
-desenvuelven, (ii) los mecanismos que describen su evolución y (iii) el contenido de la difusión. Todos esos  componentes son igualmente importantes para modelar, comprender, simular un proceso de difusión: en particular, la difusión del contenido representa el discriminante real entre difusión activa / pasiva. 
-Se suele decir "Propagación de la epidemia" para referirse a difusiones de enfermedades contagiososas originadas por patógenos biologicos. Sin embargo, una plétora de fenómenos pueden vincularse al concepto de epidemia: ejemplos son la propagación de virus informáticos (Szor 2004 ), así como la  propagación del virus del teléfono móvil.
-Mili et al. Ciencia de redes aplicada (2018) 3:42 Página 3 de 15 (Havlin 2009 ; Wang y col. 2013 ), o la difusión de conocimientos, innovaciones, productos en una red social online (Burt 1987 ).
+Los procesos de difusión se pueden dividir en tres componentes: (i) la población sobre la que se desenvuelven, (ii) los mecanismos que describen su evolución y (iii) el contenido de la difusión. Todos esos  componentes son igualmente importantes para modelar, comprender, simular un proceso de difusión: en particular, la difusión del contenido representa el discriminante real entre difusión activa / pasiva. 
+Se suele decir "Propagación de la epidemia" para referirse a difusiones de enfermedades contagiososas originadas por patógenos biológicos. Sin embargo, una plétora de fenómenos pueden vincularse al concepto de epidemia: ejemplos son la propagación de virus informáticos \cite[Szor 2004]{Szor:2004}, así como la  propagación del virus del teléfono móvil \cite[Havlin 2009]{Haviln:2009}, \cite[Wang 2013]{Wang:2013}, o la difusión de conocimientos, innovaciones, productos en una red social online \cite[Burt 1987]{Burt:1987}.
 
 Destacando de estas, su representación mediante redes complejas donde los nodos se caracterizan por su estado infeccioso e interpretan a los agentes, y los enlaces representan la interacción entre nodos.
 \\
-En el presente articulo se consideera especificamente  la difusión: innovaciones/ideas. La difusión de la teoría de la innovación, desarrollada por Rogers en 1962 (Rogers 2003) es una de las teorias de las ciencias sociales más antiguas: tiene como objetivo explicar cómo una idea o producto gana fuerza y se difunde a través de una publicación o red. La adopción de una nueva idea, comportamiento, producto, información,etc. no ocurre de forma simultanea en un sistema social, es todo un proceso en el que algunas personas son más adecuadas para adoptar la innovación que otras. El problema de la difusión de la innovación se aborda mediante variantes del \textbf{Modelo Treshold}, en dicho modelo se tiene dos alternativas l comportamientos distintas y mutuamente excluyentes, la deicisión de hacer o no hacer algo, una decisión vinculada a cuantas otras personas han tomado la misma decisión, es decir, está influenciada por el un grupo de personas y esto es conocido como presión social. En Watts(2002), se demostró que al aplicar dicho modelo en una red, puede ocurrir una cascada de difusión global debido a las interacciones entre los nodos y los threshold individuales. Sin embargo, tal modelo presenta algunas limitaciones: 
+En el presente articulo se considera especificamente la difusión: innovaciones/ideas. La difusión de la teoría de la innovación, desarrollada por Rogers en 1962 \cite*{rogers:2003} es una de las teorias de las ciencias sociales más antiguas: tiene como objetivo explicar cómo una idea o producto gana fuerza y se difunde a través de una publicación o red. La adopción de una nueva idea, comportamiento, producto, información,etc. no ocurre de forma simultanea en un sistema social, es todo un proceso en el que algunas personas son más adecuadas para adoptar la innovación que otras. El problema de la difusión de la innovación se aborda mediante variantes del \textbf{Modelo Treshold}, en dicho modelo se tiene dos alternativas l comportamientos distintas y mutuamente excluyentes, la decisión de hacer o no hacer algo, una decisión vinculada a cuantas otras personas han tomado la misma decisión, es decir, está influenciada por el un grupo de personas y esto es conocido como presión social. En \cite[Watts 2002]{watts:2002}, se demostró que al aplicar dicho modelo en una red, puede ocurrir una cascada de difusión global debido a las interacciones entre los nodos y los threshold individuales. Sin embargo, tal modelo presenta algunas limitaciones: 
 
 \begin{itemize}
 	\item No considera los impulsos externos que pueden llegar desde los medios de comunicación, publicidad, amigos, etc.
 	\item No considera a la presencia de individuos reacios (resistentes) a adoptar.
 \end{itemize}
 
-Recientemente también se investigó el efecto de la homofilia (Aral et al. 2009; Bakshy y col.2012; Suri y Watts 2011) y el papel de la influencia de los medios externos (Toole et al. 2012). Por el contrario, la presencia de personas reacias se abordó en Ruan (2015) donde se introdujo un modelo basado en threshold que incluye nodos bloqueados así como adoptantes espontáneos.
+Recientemente también se investigó el efecto de la hemofilia \cite[Aral 2009]{aral:2009}, \Cite[Bakshy 2012]{bakshy:2012}, \cite[Watts 2011]{watts:2011} y el papel de la influencia de los medios externos \cite[Toole 2012]{toole:2012}. Por el contrario, la presencia de personas reacias se abordó en \cite[Ruan 2015]{ruan:2015} donde se introdujo un modelo basado en threshold que incluye nodos bloqueados así como adoptantes espontáneos.
 \\
 En este trabajo se introdujeron dos enfoques cuyo objetivo es proporcionar esquemas activos y mixtos aplicables en el contexto de la simulación de innovaciones/conductas/difusión de ideas en el caso estático, introduciendo también el concepto de nodos bloqueados.
 
-En este trabajo, se usa una tipología particular de difusión en red, la difusión de innovaciones$/$comportamientos$/$ideas, la difusión de innovaciones se utiliza para describir un proceso activo, cada agente decide de forma autonoma adoptar$/$publicitar un contenido determinado. La difusión de información y la prorpogación de una epidemia se distinguen facilmente por el grado de actividad de los individuos que afectan.\\ 
+En este trabajo, se usa una tipología particular de difusión en red, la difusión de innovaciones$/$comportamientos$/$ideas, la difusión de innovaciones se utiliza para describir un proceso activo, cada agente decide de forma autónoma adoptar$/$publicitar un contenido determinado. La difusión de información y la propagación de una epidemia se distinguen fácilmente por el grado de actividad de los individuos que afectan.\\ 
 Tal dicotomía dependiente del contexto conduce a nuestra definición de problema:\\
 
 \textbf{Definicion 1}(Enigma activo-pasivo) Dado un \textbf{contexto social} descrito como un gráfico $G = (V, E)$, donde un nodo $v \in V$ es un individuo y ua arista $(u, v) \in E$ identifica un lazo social entre $u$, $v \in V - a$ \textbf{contenido $\psi$} y un conjunto de adoptantes que $t_0 \subset V$: ¿Cómo pueden modelarse y qué caracterizan los procesos de difusión pasiva y activa de $\psi$ sobre $G$?.
  
 \section{Diseño del Modelo}
-Para abordar fenomenos difusivos relacionados con la tipoogía de contenidos que nos interesan en este trabajo se suelen adoptar variantes del \textbf{Modelo Threshold} en el que las adopciones realizadas por los individuos están sujeres a threshold personales (indetificadsa como la presión social). Estos enfoques se centran en capturar el componente \textbf{pasivo} de la difusión, ignorando el interes del usuario por el contenido $\psi$.
+Para abordar fenómenos difusivos relacionados con la tipología de contenidos que nos interesan en este trabajo se suelen adoptar variantes del \textbf{Modelo Threshold} en el que las adopciones realizadas por los individuos están sujetos a threshold personales (identificada como la presión social). Estos enfoques se centran en capturar el componente \textbf{pasivo} de la difusión, ignorando el interés del usuario por el contenido $\psi$.
 \subsection{Formulación del modelo}
 Dado que nuestro objetivo es comparar opciones de modelado alternativas capaces de simular tanto pasivo y/o activo Los procesos de difusión primero necesitamos caracterizar los escenarios que tales enfoques deberían describir.
 \begin{itemize}
-	\item \textbf{S1: Difusión pasiva.} Este escenario asume que un proceso de difusión genérico se lleva a cabo independientemente de la voluntad de los individuos. La difusión se basa solo en la presión de grupo, el contagio social actua como la propogación del virus, ya que, alcanzada una presión suficiente de compañeros, la difusión del contenido afectará al usuario sin considerar sus preferencias individuales.
-	\item \textbf{S2: Difusión activa.} A la inversa del escenario de difusión pasiva, la difusión activa supone que el proceso de difusión es solo aparente; cada individuo decide adoptar o no un contenido determinado, se basa unicamente en el interés del individuo, descartando por completo la presión social.
-	\item \textbf{S3: Difusión mixta.} Este escenario combina procesos pasivio y activo para dar la forma a la difusión de información como una mezcla de ambos.
+	\item \textbf{S1: Difusión pasiva.} Este escenario asume que un proceso de difusión genérico se lleva a cabo independientemente de la voluntad de los individuos. La difusión se basa solo en la presión de grupo, el contagio socialactúaa como lapropagaciónn del virus, ya que, alcanzada una presión suficiente de compañeros, la difusión del contenido afectará al usuario sin considerar sus preferencias individuales.
+	\item \textbf{S2: Difusión activa.} 
+	Continuar escribiendo
+	A la inversa del escenario de difusión pasiva, la difusión activa supone que el proceso de difusión es solo aparente; cada individuo decide adoptar o no un contenido determinado, se basa únicamente en el interés del individuo, descartando por completo la presión social.
+	\item \textbf{S3: Difusión mixta.} Este escenario combina procesos pasivo y activo para dar la forma a la difusión de información como una mezcla de ambos.
 \end{itemize}
-A continuación, detallaremos las elecciones algorítmicas realizadas para proporcionar simulaciones de los escenarios
-esbozados considerando la presencia/ausencia de adopciones espontáneas y la presencia/ausencia de nodos bloqueados.	
+A continuación, detallaremos las elecciones algorítmicas realizadas para proporcionar simulaciones de los escenarios esbozados considerando la presencia/ausencia de adopciones espontáneas y la presencia/ausencia de nodos bloqueados.	
 
 \subsection{Explicación del modelo}
 Para entender las diferencias entre los escenarios propuestos los simulamos con los siguientes modelos de difusión:
 \begin{itemize}
- \item \textbf{S1: Threshold model.} Empleamos el clásico Modelo de Thresgold (Granovetter 1978) para simular un \textbf{adopción pasiva} proceso mediante el uso de una distribución teórica para el threshold de adopción como se hace en Watts (2002). Un nodo tiene dos alternativas de comportamiento distintas y mutuamente excluyentes, por ejemplo, puede adoptar o no el contenido difundido, la decisión de adoptar depende solo del porcentaje de vecinos del nodo que ya han adoptado el contenido.
+ \item \textbf{S1: Threshold model.} Empleamos el clásico Modelo de Thresgold (Granovetter 1978) para simular un \textbf{adopción pasiva} proceso mediante el uso de una distribución teórica para el threshold de adopción como se hace en \cite[Watts 2002]{watts:2002}. Un nodo tiene dos alternativas de comportamiento distintas y mutuamente excluyentes, por ejemplo, puede adoptar o no el contenido difundido, la decisión de adoptar depende solo del porcentaje de vecinos del nodo que ya han adoptado el contenido.
+ 
+  
+ \begin{algorithm} 
+ 	\caption{Algorithm 1: Threshold}
+ 	\begin{algorithmic}[1]	
+ 		\Require {$I_{t_0}$: seeds de infectados, $k$: número de iteraciones, $\tau$: umbrales del nodo}
+ 	\ForEach {$t_i \in \{1,...,k\} $}
+ 		\State {$I_{t_i}=I_{t_{i-1}}$}
+ 		\ForEach {$n \in V $}
+ 			\If {$n \not \in I_{t_{i-1}}$ $and$ $neighbors(n)\cap I_{t_{i-1}} \neq \emptyset$}
+ 			\State {$\lambda_n = |neighbors(n)\cap I_{t_{i-1}}|$}
+ 			\If{$\lambda_n \geq \tau_n$}
+ 			\State {add $n$ to $I_{t_i}$}
+ 			\EndIf
+ 			\EndIf
+	\\ \textbf{$.....$yield} $I_{t_i}$
+	 \EndFor
+	 \EndFor			
+ 	\end{algorithmic}
+ \end{algorithm}
+ 
  \item \textbf{S2: Node Profile model.}
 Para simular el activo de adopciones, cada adoptante elige adoptar el contenido dado basándose únicamente en sus preferencias personales. Cada nodo lleva su perfil $\iota$ describiendo el grado en que es probable que acepte un contenido similar al que se está difundiendo actualmente. El proceso de difusión parte de un conjunto de nodos que ya han adoptado el contenido $\psi$. Para cada uno de los nodos susceptibles en la vecindad de un nodo $n$ que ya ha adoptado $\psi$, un valor aleatorio $v$ en $[0,1]$ se extrae; Si $v \geq \iota_n$ el nodo adopta el contenido, de lo contrario, el nodo se niega a adoptar. Los nodos susceptibles pueden cambiar de opinión durante cada iteración. También implementamos una variante de dicho modelo que contempla nodos bloqueados, por ejemplo, nodos que luego de haber rechazado la adopción, con probabilidad $p$ deciden seguir con sus elecciones de forma permanente. 
+
+\begin{algorithm} 
+	\caption{Node Profile}
+	\begin{algorithmic}[1]	
+		\Require {$I_{t_0}$: seeds de infectados; $k$: número de iteraciones, $\gamma$: perfiles del nodo, $p$: probabilidad de inmunización}
+		\State {$B = \{\}$}
+		\ForEach {$t_i \in \{1,...,k\} $}
+		\State {$I_{t_i}=I_{t_{i-1}}$}
+		\ForEach {$n \in V $}
+		\If {$n \not \in I_{t_{i-1}}$ $and$ $n \not \in B$ $and$ $neighbors(n)\cap I_{t_{i-1}} \neq \emptyset$}
+		\State $r_n = rand(0,1)$
+		\If{$r_n \geq \gamma_n$}
+		\State {add $n$ to $I_{t_i}$}
+		\Else 
+			\State $ q = rand(0,1)$
+			\If{$q \leq p$}
+			\State add $n$ to $B$
+			\EndIf
+		\EndIf
+		\EndIf
+		\EndFor
+	\\ \textbf{$.....$yield} $I_{t_i}, B$
+	
+	\EndFor
+	\end{algorithmic}
+\end{algorithm}
+
  \item \textbf{S3: Profile-Threshold model.}
 Para modelar los comportamientos mixtos, implementamos un $Node$ $Profile$$-$$Threshold$, un modelo que combina el $Node$ $Profile$ $model$ descrito anteriormente con la información de presión de grupo (es decir, $Threshold$ $model$ clásico). En primer lugar, este modelo evalúa si la presión de grupo que recibe un nodo es suficiente para superar su $Threshold$, luego, si se satisface dicha restricción, evalúa el perfil del nodo. En cuanto al modelo $Node$ $Profile$, implementamos una variante que contempla los nodos bloqueados. 
+
+\begin{algorithm} 
+	\caption{Profile - Threshold}
+	\begin{algorithmic}[1]	
+		\Require {$I_{t_0}$: seeds de infectados; $k$: número de iteraciones, $\tau$: umbrales del nodo, $\gamma$: perfiles del nodo, $p$: probabilidad de inmunización}
+		\State {$B$ = $\{$$\}$}
+		\ForEach {$t_i \in \{1,...,k\} $}
+		\State {$I_{t_i}=I_{t_{i-1}}$}
+		\ForEach {$n \in V $}
+		\If {$n \not \in I_{t_{i-1}}$ $and$ $n \not \in B$ $and$ $neighbors(n) \cap I_{t_{i-1}} \neq \emptyset$}
+		\State $\lambda_n = | neighbors(n)\cap I_{t_{i-1}}| $
+		\If{$\lambda_n \geq \tau_n$ }
+		\State $r_n = rand(0,1)$
+			\If{$r_n \geq \gamma_n$}
+			\State {add $n$ to $I_{t_i}$}
+		\Else 
+		\State $ q = rand(0,1)$
+		\If{$q \leq p$}
+		\State add $n$ to $B$
+		\EndIf
+		\EndIf
+		\EndIf
+		\EndIf
+		\EndFor
+	\\ \textbf{$..... $yield} $I_{t_i}, B$
+	\EndFor
+	\end{algorithmic}
+\end{algorithm}
 \end{itemize}
 Para modelar las adopciones espontáneas, se introdujo, como primer paso antes de cada iteración de simulación, un proceso estocástico nodal que con una probabilidad fija $p$ transforma un nodo susceptible en uno infectado.
 \\
-Todos los modelos de difusión descritos se han implementado y están disponibles en la biblioteca de Python. \"NDlib\" (Rossetti y col. 2017; Rossetti y col. 2018).
-
-\begin{table}[h]
-	\begin{center}
-		\begin{tabular}{| c | c |}
-			\hline
-			\textbf{Variable} & \textbf{Descripción} \\ 
-			\hline
-			$\beta$ & Probabilidad de propagación basica \\
-			$m$ & Número de vecinos activados conectados a una $u$\\
-			$k$ & El grado del nodo $u$\\
-			$\alpha(u,v)$ & Probabilidad de activación de algún nodo\\
-			$p(u,v)$ & Sinergía del nodo\\
-			$l(d)$ & Información en descomposición Ratio\\
-			$\sigma(i,v)$ & Probabilidad de activación final del nodo $v$ por el nodo $i$ \\
-			$CI$\_$TLS(i)$ & Suma que contiene las contribuciones de los nodos cuya distancia a $i$ es menor a 3\\
-			\hline
-		\end{tabular}
-		\caption{Las variables utilizadas en el modelo TSSCM.}
-		\label{tab:TablaVariables}
-	\end{center}
-\end{table}
 
 \newpage
 \section{Recolección de Datos}
 Para comparar los impactos de escenarios activos y pasivos, llevamos a cabo una investigación basada en datos modelando el gráfico social tanto con redes sintéticas como con redes reales.
 
  \subsection{Recolección}
-Para las simulaciones, se utilizó un conjunto de datos del mundo real, la red Facebook. Esta es una muestra de WOSN2009(Viswanath et al. 2009) conjunto de datos que describe las interacciones en línea entre los usuarios de Facebook. De tal modo que en la tabla 1 se puede obtener las caracteristicas del grafo obtenido. 
-Por otra parte, simulamos los modelos de difusión introducidos también en tres modelos de generador de red sintética: Barabási-Albert (1999), Erdós-Renyi (1959) y Wats-Strogatz (1998).Para tener redes comparables a la real, fijamos el número de nodos y el grado promedio como las características reportadas en la Tabla 1.
-Por tanto, las redes generadas tienen 63392 nodos cada una, y se obtienen configurando los siguientes valores de parámetros:
+Para las simulaciones, se utilizó un conjunto de datos del mundo real, la red Facebook. Esta es una muestra de \cite[WOSN2009 Viswanath 2009]{viswanath-2009-activity} conjunto de datos que describe las interacciones en línea entre los usuarios de Facebook. De tal modo que en la tabla 1 se puede obtener las características del grafo obtenido.
+Por otra parte, simulamos los modelos de difusión introducidos también en tres modelos de generador de red sintética: Barabási-Albert \cite{barabasi:1999}, Erdós-Renyi \cite{erdos:1959} y Wats-Strogatz \cite{watts:1998}.Para tener redes comparables a la real, fijamos el número de nodos y el grado promedio como las características reportadas en la Tabla 1.
+Por tanto, las redes generadas tienen 63392 nodos cada una, y se obtienen configurando los siguientes valores de parámetros:
+
 \begin{itemize}
 \item Gráfico Barabási-Albert: Número de conexiones por nodo m = 13;
 \item Gráfico de Erdós-Renyi: probabilidad de creación de aristas p = 0,0004
 \item Gráfico de Wats-Strogatz: vecinos de nodo k = 13, probabilidad de recableado p = 0,01.
 \end{itemize} 
  \subsection{Análisis de Datos}	
-Las redes sinteticas son similares a la red real, ya que los algoritmos empleados para su construcción presentan alto grado de efectividad en construcción de grafos de este tipo. 
+Las redes sintéticas son similares a la red real, ya que los algoritmos empleados para su construcción presentan alto grado de efectividad en construcción de grafos de este tipo. La información de cada red empleada para las simulaciones, se puede visualizar en las siguientes tablas, en la que se visualizan ciertas caracteristcas sobre cada una.
 	
 \section{Construcción del Modelo}
-Los algoritmos presentados fueron implementandos en el lenguaje de programación Python ya que es un lenguaje que porporciona grandes herramientas para trabajar con grafos de una forma más sencilla y con gran variedad de herramientas para estos.
+Los algoritmos presentados fueron implementandos en el lenguaje de programación Python ya que es un lenguaje que proporciona grandes herramientas para trabajar con grafos de una forma más sencilla y con gran variedad de herramientas para estas. 
+Dos librerias fueron principales para el desarrollo central del proyecto, la primera para la creación de las redes complejas y la otra para los algoritmos de la misma, aunque también se utilizaron otras para poder generar las graficas e interfaces. Entonces, el proyecto se sustenta en apoyo a las siguientes librerías:
+\begin{itemize}
+\item \textbf{NetworkX:} Es un paquete de Python para la creación, manipulación y estudio de la estructura, dinámica y funciones de redes complejas \cite{networkx:2020}.
+\item \textbf{NDlib:} Librería de código abierto, que presenta una variante de los algoritmos descritos en este articulo \cite{ndlib:2020}. 
+\item \textbf{Matplotlib:} Es una biblioteca completa para crear visualizaciones estáticas, animadas e interactivas en Python \cite{matplotlib:2020}. 
+\item \textbf{PyQt:} Es un conjunto de enlaces de Python para el marco de la aplicación Qt de The Qt Company y se ejecuta en todas las plataformas compatibles con Qt, incluidas Windows, macOS, Linux, iOS y Android \cite{pyqt:2020}.
+\item \textbf{sqlite3:} Es una biblioteca C que proporciona una base de datos liviana basada en disco que no requiere un proceso de servidor separado y permite acceder a la base de datos utilizando una variante no estándar del lenguaje de consulta SQL \cite{sqlite:2020}.
+\end{itemize}
+
+Aunque la librería NDlib presenta en gran parte la progrmación del algoritmo descrito anteriormente, no genera los resultados posteriores, para ello se hicieron algunos ajustes sobre el código del modelo y también la forma de graficar los resultados, además como no se utiliza toda la libería, se tomó lo esencial de ella y se colocó en el proyecto ya que la librería es de código abierto y permite hacer modificaciones a la necesidad del usuario. 
+
+Crear las redes complejas fue muy sencillo, ya que la libería NetworkX proporcionaba las funciones para crear las grafos, entonces solo se hace uso de esta y la unica tarea es indicar los respectivos parametros para cada algoritmo de creación de redes. Así que esta parte no tiene mucha complejidad. 
+
+Para la base de datos se utilizó una base de datos relacional, que fue el gestos de bases de datos SQLite, y gracias a su librería $sqlite3$ fue sencillo conectar a la base de datos para extraer los datos y crear la red compleja con datos de facebook.
+
+La interfaz grafica es sencilla y basica, desarrollada con la librería PyQt en la que se proprociona lo esencial, un único botón para ejecutar la simulación y luego petañas en las que cada una contiene graficas con los resultados de la aplicación de los algoritmos al grafo o red compleja correspondiente. 
+
+
+$INSERTAR IMAGEN DE LA GUI$
 
 \section{Validación}
+\subsection{Protocolo de Analisis}
 Para realizar la validación y experimentación del modelo, así como para comparar los escenarios de difusión descritos anteriormente, diseñamos los siguientes protocolo analítico:
 \begin{itemize}
 \item Para cada conjunto de datos, seleccionamos al azar 100 conjuntos de nodos, cada uno cubriendo el $5\%$ de $V$: Dichos conjuntos identifican, para cada escenario y modelo, $100$ semillas iniciales de infección diferentes configuración - $I_0$
 \item Para cada conjunto de datos, escenario y $I_0$ se ejecutan los modelos de difusión activa, pasiva y mixta con 30 iteraciones cada uno.
 \item Comparamos los modelos analizando las tendencias de infección obtenidas así como el porcentaje de nodos infectados al final de cada simulación.
 \end{itemize}
-Para comprender el impacto que tienen los diferentes valores de los parámetros del modelo en el proceso de difusión, simulamos los tres escenarios con varias configuraciones del threshold del nodo, $τ$, y node profile $\iota$. Además, también se varia el valor de probabilidad de inmunización $p$, y tasa de adopción espontánea $a$. Como resultado, instanciamos todos las combinaciones de parámetros para los modelos seleccionados, variando sus valores en los siguientes rangos:
+Para comprender el impacto que tienen los diferentes valores de los parámetros del modelo en el proceso de difusión, simulamos los tres escenarios con varias configuraciones del threshold del nodo, $\iota$, y node profile $\iota$. Además, también se varia el valor de probabilidad de inmunización $p$, y tasa de adopción espontánea $a$. Como resultado, instanciamos todos las combinaciones de parámetros para los modelos seleccionados, variando sus valores en los siguientes rangos:
 
 \begin{itemize}
 \item Threshold, $t$ : [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
@@ -142,6 +225,163 @@ Para comprender el impacto que tienen los diferentes valores de los parámetros 
 \item Probabilidad de adopción espontanea, $a$: [0, 0.001, 0.005, 0.01]
 \end{itemize}
 
+\subsection{Resultados}
+Para caracterizar mejor los resultados obtenidos analizamos por separado los modelos que contemplan nodos bloqueados de los que no lo hacen. Tratamos de forma similar los resultados obtenidos en presencia / ausencia de adopciones espontáneas.
+
+\textbf{1. Sin inmunización, sin adopciones espontáneas.}\\
+En este escenario cae la implementación estándar de los tres métodos; Analizamos redes por separado para caracterizar mejor las diferencias entre los métodos.\\
+
+
+
+\textbf{Gráfico de Barabasi Albert}
+\begin{figure}[!tbp]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 1 a).png}
+		\caption{}
+		\label{fig:f1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 1 b).png}
+		\caption{}
+		\label{fig:f2}
+	\end{subfigure}
+		\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 1 c).png}
+		\caption{}
+		\label{fig:f3}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 1 d).png}
+		\caption{}
+		\label{fig:f4}
+	\end{subfigure}
+	\caption{Tendencias de difusión del gráfico Erdós-Renyi. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$. \textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2}
+\end{figure}
+
+
+
+\textbf{Gráfico de Erdós-Renyi}
+\begin{figure}[!tbp]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 2 a).png}
+		\caption{}
+		\label{fig:f21}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 2 b).png}
+		\caption{}
+		\label{fig:f22}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 2 c).png}
+		\caption{}
+		\label{fig:f23}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 2 d).png}
+		\caption{}
+		\label{fig:f24}
+	\end{subfigure}
+	\caption{Tendencias de difusión del gráfico Erdós-Renyi. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$. \textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2}
+\end{figure}
+
+\textbf{Gráfico de Wats-Strogatz}
+\begin{figure}[!tbp]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 a).png}
+		\caption{}
+		\label{fig:f31}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 b).png}
+		\caption{}
+		\label{fig:f32}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 c).png}
+		\caption{}
+		\label{fig:f33}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 d).png}
+		\caption{}
+		\label{fig:f34}
+	\end{subfigure}
+	\hfil
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 e).png}
+		\caption{}
+		\label{fig:f35}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 f).png}
+		\caption{}
+		\label{fig:f36}
+	\end{subfigure}
+	\caption{Tendencias de difusión del gráfico Erdós-Renyi. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$.
+		\textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2 \textbf{e} $\gamma$ = 0.4, $\tau$ = 0.3 \textbf{f} $\gamma$ = 0.4, $\tau$ = 0.4}
+\end{figure}
+
+\textbf{Gráfico de Facebook}
+\begin{figure}[!tbp]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 a).png}
+		\caption{}
+		\label{fig:f41}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 b).png}
+		\caption{}
+		\label{fig:f42}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 c).png}
+		\caption{}
+		\label{fig:f43}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 d).png}
+		\caption{}
+		\label{fig:f44}
+	\end{subfigure}
+	\hfil
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 e).png}
+		\caption{}
+		\label{fig:f45}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 f).png}
+		\caption{}
+		\label{fig:f46}
+	\end{subfigure}
+	\caption{Tendencias de difusión del grafo Facebook. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$.\textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2 \textbf{e} $\gamma$ = 0.4, $\tau$ = 0.3 \textbf{f} $\gamma$ = 0.8, $\tau$ = 0.2}
+\end{figure}
+
+
+
+
+\textbf{2. Sin inmunización, con adopciones espontáneas.}
+
+En este escenario cae la implementación estándar de los tres métodos; Analizamos redes por separado para caracterizar mejor las diferencias entre los métodos.\\
+
+\textbf{3. Con inmunización, sin adopciones espontáneas.}
+
+En este escenario cae la implementación estándar de los tres métodos; Analizamos redes por separado para caracterizar mejor las diferencias entre los métodos.\\
+
+\textbf{4. Con inmunización, con adopciones espontáneas.}
+
+En este escenario cae la implementación estándar de los tres métodos; Analizamos redes por separado para caracterizar mejor las diferencias entre los métodos.\\
 
 \section{Conclusiones}
 	Aquí finalizaré cómo fue el trabajo.

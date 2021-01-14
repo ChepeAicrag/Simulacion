@@ -17,89 +17,521 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
-  \entry{cite:36}{misc}{}
+  \entry{granovetter:1978}{article}{}
     \name{author}{1}{}{%
-      {{hash=CDMEVMMMW}{%
-         family={Centola D\bibnamedelima M},
-         familyi={C\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
-  M\bibinitperiod},
-         suffix={Macy M\bibnamedelima W},
-         suffixi={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
-  W\bibinitperiod},
-         given={Eguıluz V\bibnamedelima M.},
-         giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim
-  M\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{CDMMMWEVM1}
-    \strng{fullhash}{CDMMMWEVM1}
-    \field{labelnamesource}{author}
-  \endentry
-
-  \entry{cite:12}{misc}{}
-    \name{author}{2}{}{%
-      {{hash=KDKJ}{%
-         family={Kempe\bibnamedelima D.},
-         familyi={K\bibinitperiod\bibinitdelim D\bibinitperiod},
-         given={Kleinberg\bibnamedelima J.},
-         giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=ET}{%
-         family={E.},
-         familyi={E\bibinitperiod},
-         given={Tardos},
-         giveni={T\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KDKJET1}
-    \strng{fullhash}{KDKJET1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Maximizing the spread of influence through a social network.}
-  \endentry
-
-  \entry{cite:30}{misc}{}
-    \name{author}{2}{}{%
-      {{hash=ZMLL}{%
-         family={Zheng\bibnamedelima Muhua},
-         familyi={Z\bibinitperiod\bibinitdelim M\bibinitperiod},
-         given={Linyuan\bibnamedelima Lu¨},
-         giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod},
-      }}%
-      {{hash=ZM}{%
-         family={Zhao.},
-         familyi={Z\bibinitperiod},
-         given={Ming},
+      {{hash=GM}{%
+         family={Granovetter},
+         familyi={G\bibinitperiod},
+         given={Mark},
          giveni={M\bibinitperiod},
       }}%
     }
-    \strng{namehash}{ZMLLZM1}
-    \strng{fullhash}{ZMLLZM1}
+    \strng{namehash}{GM1}
+    \strng{fullhash}{GM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{title}{Spreading in online social networks: The role of social
-  reinforcement.}
-    \field{year}{2013}
+    \field{title}{Threshold Models of Collective Behavior}
+    \verb{url}
+    \verb https://www.journals.uchicago.edu/doi/abs/10.1086/226707
+    \endverb
+    \field{year}{1978}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
   \endentry
 
-  \entry{data:01}{online}{}
+  \entry{Szor:2004}{article}{}
     \name{author}{1}{}{%
-      {{hash=RN}{%
-         family={Repository},
-         familyi={R\bibinitperiod},
-         given={Network},
-         giveni={N\bibinitperiod},
+      {{hash=SP}{%
+         family={Szor},
+         familyi={S\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
       }}%
     }
-    \strng{namehash}{RN1}
-    \strng{fullhash}{RN1}
+    \strng{namehash}{SP1}
+    \strng{fullhash}{SP1}
     \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Fighting Computer Virus Attacks}
     \verb{url}
-    \verb http://networkrepository.com/
+    \verb https://www.usenix.org/conference/13th-usenix-security-symposium/pres
+    \verb entation/fighting-computer-virus-attacks
     \endverb
-    \field{urlday}{16}
-    \field{urlmonth}{11}
-    \field{urlyear}{2020}
+    \field{year}{2004}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{Haviln:2009}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HS}{%
+         family={Havlin},
+         familyi={H\bibinitperiod},
+         given={Shlomo},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HS1}
+    \strng{fullhash}{HS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Phone Infections}
+    \verb{url}
+    \verb https://science.sciencemag.org/content/324/5930/1023/tab-figures-data
+    \endverb
+    \field{year}{2009}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{Wang:2013}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WP}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Pu},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WP1}
+    \strng{fullhash}{WP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Understanding the spread of malicious mobile-phone programs
+  and their damage potential}
+    \verb{url}
+    \verb https://dspace.mit.edu/handle/1721.1/103101
+    \endverb
+    \field{year}{2013}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{Burt:1987}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BRS}{%
+         family={Burt},
+         familyi={B\bibinitperiod},
+         given={Ronald\bibnamedelima S.},
+         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BRS1}
+    \strng{fullhash}{BRS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Social Contagion and Innovation: Cohesion versus Structural
+  Equivalence}
+    \verb{url}
+    \verb https://www.jstor.org/stable/2779839?seq=1
+    \endverb
+    \field{year}{1987}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{rogers:2003}{article}{}
+    \name{author}{1}{}{%
+      {{hash=REM}{%
+         family={Rogers},
+         familyi={R\bibinitperiod},
+         given={Everett\bibnamedelima M.},
+         giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{REM1}
+    \strng{fullhash}{REM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Diffusion of Innovations}
+    \verb{url}
+    \verb https://www.researchgate.net/publication/257624104_Diffusion_of_Innov
+    \verb ations_5th_edition_Everett_M_Rogers_Free_Press_New_York_NY_2003_551_p
+    \verb ages
+    \endverb
+    \field{year}{2003}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{watts:2002}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WDJ}{%
+         family={Watts},
+         familyi={W\bibinitperiod},
+         given={Duncan\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WDJ1}
+    \strng{fullhash}{WDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{A simple model of global cascades on random networks}
+    \verb{url}
+    \verb https://www.pnas.org/content/99/9/5766
+    \endverb
+    \field{year}{2002}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{aral:2009}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SALMyAS}{%
+         family={Sinan\bibnamedelima Aral},
+         familyi={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+         given={Lev Muchnik y Arun\bibnamedelima Sundararajan},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  y\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SALMyAS1}
+    \strng{fullhash}{SALMyAS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Distinguishing influence-based contagion from
+  homophily-driven diffusion in dynamic networks}
+    \verb{url}
+    \verb https://www.pnas.org/content/106/51/21544
+    \endverb
+    \field{year}{2009}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{bakshy:2012}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BEMCALRI}{%
+         family={Bakshy\bibnamedelima E},
+         familyi={B\bibinitperiod\bibinitdelim E\bibinitperiod},
+         suffix={Rosenn\bibnamedelima I},
+         suffixi={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+         given={Marlow C Adamic\bibnamedelima L},
+         giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  A\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BERIMCAL1}
+    \strng{fullhash}{BERIMCAL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{The role of social networks in information diffusion}
+    \verb{url}
+    \verb https://dl.acm.org/doi/10.1145/2187836.2187907
+    \endverb
+    \field{year}{2012}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{watts:2011}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SSDJW}{%
+         family={Siddharth\bibnamedelima Suri},
+         familyi={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+         given={Duncan J.\bibnamedelima Watts},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SSDJW1}
+    \strng{fullhash}{SSDJW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Cooperation and Contagion in Web-Based, Networked Public
+  Goods Experiments}
+    \verb{url}
+    \verb https://journals.plos.org/plosone/article?id=10.1371/journal.pone.001
+    \verb 6836
+    \endverb
+    \field{year}{2011}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{toole:2012}{article}{}
+    \name{author}{1}{}{%
+      {{hash=JLTMCGMC}{%
+         family={Jameson L.\bibnamedelima Toole},
+         familyi={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  T\bibinitperiod},
+         suffix={Meeyoung\bibnamedelima Cha},
+         suffixi={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+         given={Marta C.\bibnamedelima González},
+         giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JLTMCMCG1}
+    \strng{fullhash}{JLTMCMCG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Modeling the Adoption of Innovations in the Presence of
+  Geographic and Media Influences}
+    \verb{url}
+    \verb https://journals.plos.org/plosone/article?id=10.1371/journal.pone.002
+    \verb 9528
+    \endverb
+    \field{year}{2012}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{ruan:2015}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ZRMKJKGI}{%
+         family={Zhongyuan\bibnamedelima Ruan},
+         familyi={Z\bibinitperiod\bibinitdelim R\bibinitperiod},
+         suffix={Gerardo\bibnamedelima Iñiguez},
+         suffixi={G\bibinitperiod\bibinitdelim I\bibinitperiod},
+         given={Márton Karsai János\bibnamedelima Kertész},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim
+  J\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZRGIMKJK1}
+    \strng{fullhash}{ZRGIMKJK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Kinetics of Social Contagion}
+    \verb{url}
+    \verb https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.115.218702
+    \endverb
+    \field{year}{2015}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{viswanath-2009-activity}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=VB}{%
+         family={Viswanath},
+         familyi={V\bibinitperiod},
+         given={Bimal},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mislove},
+         familyi={M\bibinitperiod},
+         given={Alan},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Cha},
+         familyi={C\bibinitperiod},
+         given={Meeyoung},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GKP}{%
+         family={Gummadi},
+         familyi={G\bibinitperiod},
+         given={Krishna\bibnamedelima P.},
+         giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VB+1}
+    \strng{fullhash}{VBMACMGKP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 2nd ACM SIGCOMM Workshop on Social
+  Networks (WOSN'09)}
+    \field{title}{On the Evolution of User Interaction in Facebook}
+    \list{location}{1}{%
+      {Barcelona, Spain}%
+    }
+    \field{year}{2009}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{barabasi:1999}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ALBRA}{%
+         family={Albert-László\bibnamedelima Barabási*},
+         familyi={A\bibinithyphendelim L\bibinitperiod\bibinitdelim
+  B\bibinitperiod},
+         given={Réka\bibnamedelima Albert},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ALBRA1}
+    \strng{fullhash}{ALBRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Emergence of Scaling in Random Networks}
+    \verb{url}
+    \verb https://science.sciencemag.org/content/286/5439/509
+    \endverb
+    \field{year}{1999}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{erdos:1959}{article}{}
+    \name{author}{1}{}{%
+      {{hash=EP}{%
+         family={Erdős},
+         familyi={E\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EP1}
+    \strng{fullhash}{EP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{On random graphs I.}
+    \verb{url}
+    \verb http://www.leonidzhukov.net/hse/2014/networks/papers/erdos-1959-11.pd
+    \verb f
+    \endverb
+    \field{year}{1959}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{watts:1998}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SDJWSH}{%
+         family={Strogatz},
+         familyi={S\bibinitperiod},
+         given={Duncan J. Watts, Steven\bibnamedelima H.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  W\bibinitperiod\bibinitdelim \bibinitperiod\bibinitdelim
+  S\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SDJWSH1}
+    \strng{fullhash}{SDJWSH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Collective dynamics of ‘small-world’ networks}
+    \verb{url}
+    \verb http://snap.stanford.edu/class/cs224w-readings/watts98smallworld.pdf
+    \endverb
+    \field{year}{1998}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{networkx:2020}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=AV}{%
+         family={Autores},
+         familyi={A\bibinitperiod},
+         given={Varios},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AV1}
+    \strng{fullhash}{AV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{url{https://networkx.org/}}
+    \field{title}{NetworkX}
+    \field{year}{2020}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{ndlib:2020}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=RG}{%
+         family={Rossetti},
+         familyi={R\bibinitperiod},
+         given={Giulio},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RG1}
+    \strng{fullhash}{RG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{url{https://ndlib.readthedocs.io/en/latest/index.html}}
+    \field{title}{NDlib - Network Diffusion Library}
+    \field{year}{2020}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{matplotlib:2020}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=HJ}{%
+         family={Hunter},
+         familyi={H\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJ1}
+    \strng{fullhash}{HJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{url{https://matplotlib.org/}}
+    \field{title}{Matplotlib: Visualization with Python}
+    \field{year}{2020}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{pyqt:2020}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=CR}{%
+         family={Computing},
+         familyi={C\bibinitperiod},
+         given={Riverbank},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CR1}
+    \strng{fullhash}{CR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{url{https://www.riverbankcomputing.com/software/pyqt/}}
+    \field{title}{PyQt5}
+    \field{year}{2020}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{sqlite:2020}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=HG}{%
+         family={Häring},
+         familyi={H\bibinitperiod},
+         given={Gerhard},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HG1}
+    \strng{fullhash}{HG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{url{https://docs.python.org/3/library/sqlite3.html}}
+    \field{title}{SQLite databases}
+    \field{year}{2020}
+    \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
   \endentry
 \enddatalist
 \endinput

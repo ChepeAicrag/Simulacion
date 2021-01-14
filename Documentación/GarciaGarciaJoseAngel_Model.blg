@@ -22,139 +22,232 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: GarciaGarciaJoseAngel_Model-blx.bib
 Database file #2: bibliography.bib
-Warning--entry type for "cite:36" isn't style-file defined
---line 45 of file bibliography.bib
-I was expecting a `,' or a `}'---line 47 of file bibliography.bib
- :   
- :   title = {Cascade dynamics of multiplex propagation.}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Warning--entry type for "cite:30" isn't style-file defined
---line 52 of file bibliography.bib
-Warning--entry type for "cite:12" isn't style-file defined
---line 59 of file bibliography.bib
-I was expecting an "="---line 62 of file bibliography.bib
- :   in 
- :      Proc. ACM SIGKDD Int. Conf. Knowl.Discovery Data Mining.
+Repeated entry---line 107 of file bibliography.bib
+ : @article{ruan:2015
+ :                   ,
 I'm skipping whatever remains of this entry
 Biblatex version: 3.15
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2697 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2697 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2697 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2697 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2697 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2697 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2697 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2697 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2697 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2701 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2701 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2701 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2701 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2701 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2701 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2707 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2707 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2707 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2707 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2707 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2707 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2711 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2711 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2711 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2711 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2711 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2711 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2711 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2711 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2711 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2711 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2711 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2711 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2715 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2715 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2715 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2715 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2715 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2715 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2721 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2721 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2721 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2721 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2721 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2721 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2725 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2725 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2725 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2725 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2725 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2725 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2725 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2725 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2725 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2725 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
+while executing---line 2725 of file biblatex.bst
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2725 of file biblatex.bst
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Kempe D., Kleinberg J., and Tardos E." has a comma at the end for entry cite:12
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2813 of file biblatex.bst
-Name 1 in "Zheng Muhua, Linyuan Lu¨, and Ming Zhao." has a comma at the end for entry cite:30
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2813 of file biblatex.bst
-You've used 5 entries,
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2813 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2813 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2813 of file biblatex.bst
+Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
+while executing---line 2813 of file biblatex.bst
+You've used 22 entries,
             6393 wiz_defined-function locations,
-            1214 strings with 9355 characters,
-and the built_in function-call counts, 26674 in all, are:
-= -- 1920
-> -- 679
-< -- 92
-+ -- 676
-- -- 382
-* -- 1866
-:= -- 3101
+            1306 strings with 12119 characters,
+and the built_in function-call counts, 133996 in all, are:
+= -- 7774
+> -- 6944
+< -- 662
++ -- 6350
+- -- 5166
+* -- 8152
+:= -- 15700
 add.period$ -- 0
-call.type$ -- 5
-change.case$ -- 23
-chr.to.int$ -- 66
-cite$ -- 8
-duplicate$ -- 1999
-empty$ -- 2543
-format.name$ -- 215
-if$ -- 5466
+call.type$ -- 22
+change.case$ -- 163
+chr.to.int$ -- 523
+cite$ -- 42
+duplicate$ -- 10708
+empty$ -- 11845
+format.name$ -- 961
+if$ -- 24462
 int.to.chr$ -- 0
-int.to.str$ -- 8
+int.to.str$ -- 43
 missing$ -- 0
-newline$ -- 101
-num.names$ -- 152
-pop$ -- 1430
+newline$ -- 522
+num.names$ -- 816
+pop$ -- 7006
 preamble$ -- 1
-purify$ -- 41
+purify$ -- 232
 quote$ -- 0
-skip$ -- 718
+skip$ -- 3616
 stack$ -- 0
-substring$ -- 4093
-swap$ -- 403
-text.length$ -- 112
+substring$ -- 16187
+swap$ -- 2823
+text.length$ -- 589
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 155
+type$ -- 736
 warning$ -- 0
-while$ -- 321
+while$ -- 1449
 width$ -- 0
-write$ -- 97
-(There were 40 error messages)
+write$ -- 501
+(There were 91 error messages)
