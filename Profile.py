@@ -14,7 +14,7 @@ def make_p_graph_simulation(if_seed, profile, p, a, g):
     for i in g.nodes():
         config.add_node_configuration("profile", i, profile)
     model.set_initial_status(config)
-    iterations = model.iteration_bunch(30)
+    iterations = model.iteration_bunch(31)
     trends = model.build_trends(iterations)
     print("Simulation Finished")
     return model, trends

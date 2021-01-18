@@ -22,10 +22,12 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: GarciaGarciaJoseAngel_Model-blx.bib
 Database file #2: bibliography.bib
-Repeated entry---line 107 of file bibliography.bib
+Repeated entry---line 98 of file bibliography.bib
  : @article{ruan:2015
  :                   ,
 I'm skipping whatever remains of this entry
+Warning--entry type for "filtros:2020" isn't style-file defined
+--line 180 of file bibliography.bib
 Biblatex version: 3.15
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
@@ -209,45 +211,45 @@ Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, 
 while executing---line 2813 of file biblatex.bst
 Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2813 of file biblatex.bst
-You've used 22 entries,
+You've used 23 entries,
             6393 wiz_defined-function locations,
-            1306 strings with 12119 characters,
-and the built_in function-call counts, 133996 in all, are:
-= -- 7774
-> -- 6944
-< -- 662
-+ -- 6350
-- -- 5166
-* -- 8152
-:= -- 15700
+            1311 strings with 12256 characters,
+and the built_in function-call counts, 140775 in all, are:
+= -- 8178
+> -- 7283
+< -- 693
++ -- 6652
+- -- 5434
+* -- 8585
+:= -- 16480
 add.period$ -- 0
-call.type$ -- 22
-change.case$ -- 163
-chr.to.int$ -- 523
-cite$ -- 42
-duplicate$ -- 10708
-empty$ -- 11845
-format.name$ -- 961
-if$ -- 24462
+call.type$ -- 23
+change.case$ -- 170
+chr.to.int$ -- 547
+cite$ -- 44
+duplicate$ -- 11196
+empty$ -- 12468
+format.name$ -- 1005
+if$ -- 25711
 int.to.chr$ -- 0
-int.to.str$ -- 43
+int.to.str$ -- 45
 missing$ -- 0
-newline$ -- 522
-num.names$ -- 816
-pop$ -- 7006
+newline$ -- 556
+num.names$ -- 854
+pop$ -- 7334
 preamble$ -- 1
-purify$ -- 232
+purify$ -- 242
 quote$ -- 0
-skip$ -- 3616
+skip$ -- 3783
 stack$ -- 0
-substring$ -- 16187
-swap$ -- 2823
-text.length$ -- 589
+substring$ -- 17106
+swap$ -- 2950
+text.length$ -- 616
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 736
+type$ -- 769
 warning$ -- 0
-while$ -- 1449
+while$ -- 1515
 width$ -- 0
-write$ -- 501
+write$ -- 534
 (There were 91 error messages)

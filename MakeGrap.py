@@ -21,4 +21,5 @@ def make_graph_db(nameFile, table):
     G = nx.DiGraph()
     #G.add_weighted_edges_from(cur.fetchall())
     G.add_edges_from(cur.fetchall())
+    print('Grafo creado')
     return G

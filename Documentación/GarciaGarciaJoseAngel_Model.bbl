@@ -17,6 +17,31 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
+  \entry{filtros:2020}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=GJAG}{%
+         family={Garcia},
+         familyi={G\bibinitperiod},
+         given={Jose Angel\bibnamedelima Garcia},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GJAG1}
+    \strng{fullhash}{GJAG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Filtros de Modelos}
+    \verb{url}
+    \verb https://docs.google.com/spreadsheets/d/1z7BNBZoBWgpI1OsBOl8HLMe40YfQD
+    \verb vHNvH_RnVEIkSI/edit?usp=sharing
+    \endverb
+    \field{year}{2020}
+    \field{urlday}{18}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
   \entry{granovetter:1978}{article}{}
     \name{author}{1}{}{%
       {{hash=GM}{%
@@ -406,17 +431,17 @@
 
   \entry{watts:1998}{article}{}
     \name{author}{1}{}{%
-      {{hash=SDJWSH}{%
-         family={Strogatz},
-         familyi={S\bibinitperiod},
-         given={Duncan J. Watts, Steven\bibnamedelima H.},
-         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
-  W\bibinitperiod\bibinitdelim \bibinitperiod\bibinitdelim
-  S\bibinitperiod\bibinitdelim H\bibinitperiod},
+      {{hash=DJWSHS}{%
+         family={Duncan J.\bibnamedelima Watts},
+         familyi={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+         given={Steven H.\bibnamedelima Strogatz},
+         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim
+  S\bibinitperiod},
       }}%
     }
-    \strng{namehash}{SDJWSH1}
-    \strng{fullhash}{SDJWSH1}
+    \strng{namehash}{DJWSHS1}
+    \strng{fullhash}{DJWSHS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{title}{Collective dynamics of ‘small-world’ networks}
@@ -429,7 +454,7 @@
     \field{urlyear}{2021}
   \endentry
 
-  \entry{networkx:2020}{misc}{}
+  \entry{networkx:2020}{online}{}
     \name{author}{1}{}{%
       {{hash=AV}{%
          family={Autores},
@@ -442,15 +467,17 @@
     \strng{fullhash}{AV1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{howpublished}{url{https://networkx.org/}}
     \field{title}{NetworkX}
+    \verb{url}
+    \verb https://networkx.org/
+    \endverb
     \field{year}{2020}
     \field{urlday}{06}
     \field{urlmonth}{01}
     \field{urlyear}{2021}
   \endentry
 
-  \entry{ndlib:2020}{misc}{}
+  \entry{ndlib:2020}{online}{}
     \name{author}{1}{}{%
       {{hash=RG}{%
          family={Rossetti},
@@ -463,15 +490,17 @@
     \strng{fullhash}{RG1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-  \field{howpublished}{url{https://ndlib.readthedocs.io/en/latest/index.html}}
     \field{title}{NDlib - Network Diffusion Library}
+    \verb{url}
+    \verb https://ndlib.readthedocs.io/en/latest/index.html
+    \endverb
     \field{year}{2020}
     \field{urlday}{06}
     \field{urlmonth}{01}
     \field{urlyear}{2021}
   \endentry
 
-  \entry{matplotlib:2020}{misc}{}
+  \entry{matplotlib:2020}{online}{}
     \name{author}{1}{}{%
       {{hash=HJ}{%
          family={Hunter},
@@ -484,15 +513,17 @@
     \strng{fullhash}{HJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{howpublished}{url{https://matplotlib.org/}}
     \field{title}{Matplotlib: Visualization with Python}
+    \verb{url}
+    \verb https://matplotlib.org/
+    \endverb
     \field{year}{2020}
     \field{urlday}{06}
     \field{urlmonth}{01}
     \field{urlyear}{2021}
   \endentry
 
-  \entry{pyqt:2020}{misc}{}
+  \entry{pyqt:2020}{online}{}
     \name{author}{1}{}{%
       {{hash=CR}{%
          family={Computing},
@@ -505,15 +536,17 @@
     \strng{fullhash}{CR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-  \field{howpublished}{url{https://www.riverbankcomputing.com/software/pyqt/}}
     \field{title}{PyQt5}
+    \verb{url}
+    \verb https://www.riverbankcomputing.com/software/pyqt/
+    \endverb
     \field{year}{2020}
     \field{urlday}{06}
     \field{urlmonth}{01}
     \field{urlyear}{2021}
   \endentry
 
-  \entry{sqlite:2020}{misc}{}
+  \entry{sqlite:2020}{online}{}
     \name{author}{1}{}{%
       {{hash=HG}{%
          family={Häring},
@@ -526,8 +559,10 @@
     \strng{fullhash}{HG1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{howpublished}{url{https://docs.python.org/3/library/sqlite3.html}}
     \field{title}{SQLite databases}
+    \verb{url}
+    \verb https://docs.python.org/3/library/sqlite3.html
+    \endverb
     \field{year}{2020}
     \field{urlday}{06}
     \field{urlmonth}{01}

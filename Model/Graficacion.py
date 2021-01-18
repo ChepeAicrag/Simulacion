@@ -3,7 +3,7 @@ from Model.Palettes import Category20_9 as cols
 import os
 import matplotlib as mpl
 import PyQt5
-
+import seaborn as sb
 if os.environ.get('DISPLAY', '') == '':
     print('no display found. Using non-interactive Agg backend')
 import future.utils
@@ -21,7 +21,11 @@ class ComparisonPlot(object):
     def __init__(self, models, trends, plt, statuses=["Infected"]):
         self.models = models
         self.trends = trends
-        self.plt = plt
+        if plt != None:
+            self.plt = plt
+            self.headmap = False
+        else:
+            self.headmap = True
         if len(models) != len(trends):
             raise InitializationException({"message": "The number of models does not match the number of trends"})
 
@@ -72,38 +76,44 @@ class ComparisonPlot(object):
         :param percentile: The percentile for the trend variance area. Default 90.
 
         """
-
         pres = self.iteration_series(percentile)
         mpl.use('Qt5Agg')
         mx = 0
         i, h = 0, 0
+        lol = []
         for k, l in future.utils.iteritems(pres):
             j = 0
+            cont = 0
             for st in l:
                 mx = len(l[st][0])
-                if self.normalized:
+                cont += 1
+                if self.normalized == True and self.headmap != True:
                     self.plt.plot(list(range(0, mx)), l[st][1]/self.nnodes, lw=2,
                              label="%s - %s" % (k.split("_")[0], st), alpha=0.9, color=cols[h+j])
                     self.plt.fill_between(list(range(0,  mx)), l[st][0]/self.nnodes,
                                      l[st][2]/self.nnodes, alpha=0.2, color=cols[h+j])
-                else:
+                elif self.headmap != True:
                     self.plt.plot(list(range(0, mx)), l[st][1], lw=2,
                              label="%s - %s" % (k.split("_")[0], st), alpha=0.9, color=cols[h + j])
                     self.plt.fill_between(list(range(0, mx)), l[st][0],
                                      l[st][2], alpha=0.2, color=cols[h + j])
                 j += 1
+                if cont == len(l):
+                    lol = l[st][1] / self.nnodes
+                    print(lol)
             i += 1
             h += 2
-
-        self.plt.grid(axis="y")
-        self.plt.set_xlabel("Iteraciones", fontsize=15)
-        self.plt.set_ylabel("Nodos infectados", fontsize=15)
-        self.plt.legend(loc="best", fontsize=10)
-        self.plt.set_xlim(0,mx)
-        if self.normalized:
-            self.plt.set_ylim((0, 1))
-        self.plt.figure.tight_layout()
-        if filename is not None:
-            self.plt.figure.savefig(filename)
-            # plt.clf()
-        #self.plt.figure.show()
+        if self.headmap != True:
+            self.plt.grid(axis="y")
+            self.plt.set_xlabel("Iteraciones", fontsize=15)
+            self.plt.set_ylabel("Nodos infectados", fontsize=15)
+            self.plt.legend(loc="best", fontsize=10)
+            self.plt.set_xlim(0,mx)
+            if self.normalized:
+                self.plt.set_ylim((0, 1))
+            self.plt.figure.tight_layout()
+            if filename is not None:
+                self.plt.figure.savefig(filename)  
+                # plt.clf()
+            #self.plt.figure.show()
+        return lol

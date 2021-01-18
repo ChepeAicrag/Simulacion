@@ -1,5 +1,5 @@
 QTabWidget::pane { /* The tab widget frame */
-    border-top: 2px solid #C2C7CB;
+    border-top: 2px solid #0587f1;
 }
 
 QTabWidget::tab-bar {

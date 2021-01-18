@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx}
+\usepackage{wrapfig}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[spanish, es-tabla]{babel}
@@ -38,6 +39,19 @@
 \tableofcontents
 \newpage
 	
+\section{Selección de Modelo}	
+Antes de explicar a detalle el trabajo realizado, se debe recalcar que para elegir este modelo se realizaron diferentes actividades. Y se enlista a continuación las hojas que contiene el documento de calculo en el que se puede encontrar el filtrado realizado \cite{filtros:2020}.
+\begin{itemize}
+	\item \textbf{Busqueda}: Se plasman los 100 modelos de simulación buscados.
+	\item \textbf{Filtro-1}: Se eligen los modelos de simulación que más me hayan llamado la atención.
+	\item \textbf{Filtro-2}: Se evalua los modelos del filtro anterior para ver la viabilidad de conseguir los datos.
+	\item \textbf{Filtro-3}: Se examinan las variables de los modelos que pasaron hasta este filtro, para analizar la dificultad de su implementación.
+	\item \textbf{Filtro-3.2}: Se realiza el mismo filtro, examinando a mayor detalle.
+	\item \textbf{Filtro-3.3}: Se vuelve a aplicar el mismo filtro pero ahora intento explicar el modelo para ver si se entiende con claridad y optar por los más precisos.
+	\item \textbf{Filtro-4}: Se clasifican los modelos, debido a que algunos son de la misma área, en este punto tenía modelos de colas y de grafos.
+	\item \textbf{Elegido}: Se plasma el modelo elegido, que es el descrito a continuación.
+\end{itemize}
+
 \section{Introducción}
  La información, las ideas, los virus, todos ellos tienen algo en común: describen diferentes tipos de “contenidos” que necesitan ser vinculaos por agentes interactuantes para difundirse. Estos agentes pueden ser animales, personas o cualquier otro ser vivo, inclusive una computadora o dispositivos tecnológicos conectados por una red compleja que describe sus relaciones. Los procesos de difusión presentan características que afectan la forma en que evolucionan, una de esas características es el \textbf{grado de actividad} de sus agentes, donde esto puede ser \textbf{pasivo} y \textbf{activo}, aunque en algunos casos pueden tomar ambos comportamientos. Además, en determinadas circunstancias, un contenido puede necesitar tanto de un cierto grado de exposición de los actores como su interés para ser tomado en cuenta.
  \\
@@ -82,7 +96,7 @@ Dado que nuestro objetivo es comparar opciones de modelado alternativas capaces 
 A continuación, detallaremos las elecciones algorítmicas realizadas para proporcionar simulaciones de los escenarios esbozados considerando la presencia/ausencia de adopciones espontáneas y la presencia/ausencia de nodos bloqueados.	
 
 \subsection{Explicación del modelo}
-Para entender las diferencias entre los escenarios propuestos los simulamos con los siguientes modelos de difusión:
+Para entender las diferencias entre los escenarios propuestos se simularon con los siguientes modelos de difusión:
 \begin{itemize}
  \item \textbf{S1: Threshold model.} Empleamos el clásico Modelo de Thresgold (Granovetter 1978) para simular un \textbf{adopción pasiva} proceso mediante el uso de una distribución teórica para el threshold de adopción como se hace en \cite[Watts 2002]{watts:2002}. Un nodo tiene dos alternativas de comportamiento distintas y mutuamente excluyentes, por ejemplo, puede adoptar o no el contenido difundido, la decisión de adoptar depende solo del porcentaje de vecinos del nodo que ya han adoptado el contenido.
  
@@ -138,6 +152,7 @@ Para simular el activo de adopciones, cada adoptante elige adoptar el contenido 
  \item \textbf{S3: Profile-Threshold model.}
 Para modelar los comportamientos mixtos, implementamos un $Node$ $Profile$$-$$Threshold$, un modelo que combina el $Node$ $Profile$ $model$ descrito anteriormente con la información de presión de grupo (es decir, $Threshold$ $model$ clásico). En primer lugar, este modelo evalúa si la presión de grupo que recibe un nodo es suficiente para superar su $Threshold$, luego, si se satisface dicha restricción, evalúa el perfil del nodo. En cuanto al modelo $Node$ $Profile$, implementamos una variante que contempla los nodos bloqueados. 
 
+Para modelar las adopciones espontáneas, se introdujo, como primer paso antes de cada iteración de simulación, un proceso estocástico nodal que con una probabilidad fija $p$ transforma un nodo susceptible en uno infectado.
 \begin{algorithm} 
 	\caption{Profile - Threshold}
 	\begin{algorithmic}[1]	
@@ -166,8 +181,6 @@ Para modelar los comportamientos mixtos, implementamos un $Node$ $Profile$$-$$Th
 	\end{algorithmic}
 \end{algorithm}
 \end{itemize}
-Para modelar las adopciones espontáneas, se introdujo, como primer paso antes de cada iteración de simulación, un proceso estocástico nodal que con una probabilidad fija $p$ transforma un nodo susceptible en uno infectado.
-\\
 
 \newpage
 \section{Recolección de Datos}
@@ -179,10 +192,23 @@ Por otra parte, simulamos los modelos de difusión introducidos también en tres
 Por tanto, las redes generadas tienen 63392 nodos cada una, y se obtienen configurando los siguientes valores de parámetros:
 
 \begin{itemize}
-\item Gráfico Barabási-Albert: Número de conexiones por nodo m = 13;
-\item Gráfico de Erdós-Renyi: probabilidad de creación de aristas p = 0,0004
-\item Gráfico de Wats-Strogatz: vecinos de nodo k = 13, probabilidad de recableado p = 0,01.
-\end{itemize} 
+\item Grafo Barabási-Albert: Número de conexiones por nodo m = 13;
+\item Grafo de Erdós-Renyi: probabilidad de creación de aristas p = 0,0004
+\item Grafo de Wats-Strogatz: vecinos de nodo k = 13, probabilidad de recableado p = 0,01.
+\end{itemize}
+
+\begin{table}[h]
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Nodos & Interacciones & Bordes & CC & Observacion & Grado promedio \\
+		\hline
+		63392 & 304392 & 816886 & 13 & 365 días & 13 \\
+		\hline
+	\end{tabular}
+	\label{tab:table1}
+	\caption{Estadisticas del grafo de Facebook.}
+\end{table}
+
  \subsection{Análisis de Datos}	
 Las redes sintéticas son similares a la red real, ya que los algoritmos empleados para su construcción presentan alto grado de efectividad en construcción de grafos de este tipo. La información de cada red empleada para las simulaciones, se puede visualizar en las siguientes tablas, en la que se visualizan ciertas caracteristcas sobre cada una.
 	
@@ -197,7 +223,7 @@ Dos librerias fueron principales para el desarrollo central del proyecto, la pri
 \item \textbf{sqlite3:} Es una biblioteca C que proporciona una base de datos liviana basada en disco que no requiere un proceso de servidor separado y permite acceder a la base de datos utilizando una variante no estándar del lenguaje de consulta SQL \cite{sqlite:2020}.
 \end{itemize}
 
-Aunque la librería NDlib presenta en gran parte la progrmación del algoritmo descrito anteriormente, no genera los resultados posteriores, para ello se hicieron algunos ajustes sobre el código del modelo y también la forma de graficar los resultados, además como no se utiliza toda la libería, se tomó lo esencial de ella y se colocó en el proyecto ya que la librería es de código abierto y permite hacer modificaciones a la necesidad del usuario. 
+Aunque la librería NDlib presenta en gran parte la progrmación del algoritmo descrito anteriormente, no genera los resultados posteriores, para ello se hicieron algunos ajustes sobre el código del modelo y también la forma de graficar los resultados, además como no se utiliza toda la libería, se tomó lo esencial de ella y se colocó en el proyecto, ya que la librería es de código abierto y permite hacer modificaciones a la necesidad del usuario. 
 
 Crear las redes complejas fue muy sencillo, ya que la libería NetworkX proporcionaba las funciones para crear las grafos, entonces solo se hace uso de esta y la unica tarea es indicar los respectivos parametros para cada algoritmo de creación de redes. Así que esta parte no tiene mucha complejidad. 
 
@@ -205,9 +231,37 @@ Para la base de datos se utilizó una base de datos relacional, que fue el gesto
 
 La interfaz grafica es sencilla y basica, desarrollada con la librería PyQt en la que se proprociona lo esencial, un único botón para ejecutar la simulación y luego petañas en las que cada una contiene graficas con los resultados de la aplicación de los algoritmos al grafo o red compleja correspondiente. 
 
+\begin{figure}[!tbp]
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{../Images/GUI_1.PNG}
+		\caption{}
+		\label{fig:gui1}
+	\end{subfigure}
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{../Images/GUI_2.PNG}
+		\caption{}
+		\label{fig:gui2}
+	\end{subfigure}
+	\label{fig:graficas}
+	\caption{Interfaz grafica donde se muestran las graficas para los resultados de los grafos de Barabási-Albert y Erdós Renyi.}
+\end{figure}
 
-$INSERTAR IMAGEN DE LA GUI$
-
+\begin{figure}[!tbp]
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=\textwidth]{../Images/GUI_3.PNG}
+		\caption{}
+		\label{fig:gui3}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{1\textwidth}
+	\includegraphics[width=\textwidth]{../Images/GUI_4.PNG}
+	\caption{}
+	\label{fig:gui4}
+	\end{subfigure}
+	\label{fig:graficas}
+	\caption{Interfaz grafica donde se muestran las graficas para los resultados del grafo de Wats-Strogatz y Facebook.}
+\end{figure}
+\newpage
 \section{Validación}
 \subsection{Protocolo de Analisis}
 Para realizar la validación y experimentación del modelo, así como para comparar los escenarios de difusión descritos anteriormente, diseñamos los siguientes protocolo analítico:
@@ -224,169 +278,305 @@ Para comprender el impacto que tienen los diferentes valores de los parámetros 
 \item Porcentaje de nodos bloqueados $p$: [0, 0.1, 0.2, 0.3]
 \item Probabilidad de adopción espontanea, $a$: [0, 0.001, 0.005, 0.01]
 \end{itemize}
-
+\newpage
 \subsection{Resultados}
+
+No se implementa interfaz para mostrar los mapas de calor generados, ya que el consumo de recursos que utiliza para realizar todas las simulaciones es demasiado elevado y además el poder generar los mapas de calor requiere de alto tiempo de ejecución, un promedio de 1.5 hr por mapa de calor. A pesar de eso, se muestran las imagenes generadas sobre estos y por otra parte, las graficas si se muestran en interfaz 
+
+
 Para caracterizar mejor los resultados obtenidos analizamos por separado los modelos que contemplan nodos bloqueados de los que no lo hacen. Tratamos de forma similar los resultados obtenidos en presencia / ausencia de adopciones espontáneas.
 
 \textbf{1. Sin inmunización, sin adopciones espontáneas.}\\
-En este escenario cae la implementación estándar de los tres métodos; Analizamos redes por separado para caracterizar mejor las diferencias entre los métodos.\\
+En este escenario cae la implementación estándar de los tres métodos; Analizamos redes por separado para caracterizar mejor las diferencias entre los métodos.
+
+\textbf{Grafo de Barabási-Albert}
+\\
+En la $Figura$ $3$ se puede apreciar los resultados obtenidos de las tendencias de difusión al aplicar los tres modelos en la red generada mediante el algoritmo de Barabási-Albert. 
+\begin{itemize}
+	\item En la $Figura$ $\ref{fig:f1}$ se puede observar que al fijar los umbrales $\tau = 0.1$ y los valores de los perfiles del nodo $\gamma = 0.1$ se obtiene que las tendencias de los tres modelos son similares.
+	\item En la $Figura$ $\ref{fig:f2}$ se puede observar que al fijar los umbrales $\tau = 0.1$ y los valores de los perfiles del nodo $\gamma = 0.4$ se observa que los tres modelos a la cuarta iteración tienen a la mayor parte de la red como infectados, aunque el modelo $Threshold$ tiende a hacelo más rapido.
+	\item En la $Figura$ $\ref{fig:f3}$ se puede observar que al fijar los umbrales $\tau = 0.1$ y los valores de los perfiles del nodo $\gamma = 0.8$ se observa que el modelo $Threshold$ es el más rapido en realizar la infección de la red en pocas iteraciones y los otros dos se mantienten similares.
+	\item En la $Figura$ $\ref{fig:f4}$ se puede observar que al fijar los umbrales $\tau = 0.2$ y los valores de los perfiles del nodo $\gamma = 0.4$ se observa notablemente que el modelo $Threshold$ se mantiene como el más rapido para infectar, debido a que la presión del exterior es significativa o tiende a ser superior a tus ideales, es decir, eres influenciados por la presión de otros.
+\end{itemize}
 
 
-
-\textbf{Gráfico de Barabasi Albert}
 \begin{figure}[!tbp]
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 1 a).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 1 a).png}
 		\caption{}
 		\label{fig:f1}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 1 b).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 1 b).png}
 		\caption{}
 		\label{fig:f2}
 	\end{subfigure}
 		\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 1 c).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 1 c).png}
 		\caption{}
 		\label{fig:f3}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 1 d).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 1 d).png}
 		\caption{}
 		\label{fig:f4}
 	\end{subfigure}
-	\caption{Tendencias de difusión del gráfico Erdós-Renyi. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$. \textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2}
+	\label{fig:FIG1}
+	\caption{Tendencias de difusión del grafo Barabási-Albert. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$. \textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2}
 \end{figure}
+\newpage
+\textbf{Grafo de Erdós-Renyi}
+En la $Figura$ $4$ se puede apreciar los resultados obtenidos de las tendencias de difusión al aplicar los tres modelos en la red generada mediante el algoritmo de Erdós-Renyi. 
+\begin{itemize}
+	\item Lo que se puede observar de todas las subfiguras es que son muy similiares a las obtenidas en la $Figura$ $3$, por lo que no queda más por detallar sobre esto.
+\end{itemize}
 
-
-
-\textbf{Gráfico de Erdós-Renyi}
 \begin{figure}[!tbp]
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 2 a).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 2 a).png}
 		\caption{}
 		\label{fig:f21}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 2 b).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 2 b).png}
 		\caption{}
 		\label{fig:f22}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 2 c).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 2 c).png}
 		\caption{}
 		\label{fig:f23}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 2 d).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 2 d).png}
 		\caption{}
 		\label{fig:f24}
 	\end{subfigure}
-	\caption{Tendencias de difusión del gráfico Erdós-Renyi. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$. \textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2}
+	\label{fig:FIG2}
+	\caption{Tendencias de difusión del grafo Erdós-Renyi. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$. \textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2}
 \end{figure}
+\newpage
+\textbf{Grafo de Wats-Strogatz}
+En la $Figura$ $5$ se puede apreciar los resultados obtenidos de las tendencias de difusión al aplicar los tres modelos en la red generada mediante el algoritmo de Wats-Strogatz. 
 
-\textbf{Gráfico de Wats-Strogatz}
+\begin{itemize}
+	\item En la $Figura$ $\ref{fig:f31}$ se puede observar que al fijar los umbrales $\tau = 0.1$ y los valores de los perfiles del nodo $\gamma = 0.1$ se obtiene que el modelo de $Profile$ realiza las infecciones de forma más rapida y los modelos restantes lo hacen de forma similiar y más lento.
+	\item En la $Figura$ $\ref{fig:f32}$ se puede observar que al fijar los umbrales $\tau = 0.1$ y los valores de los perfiles del nodo $\gamma = 0.4$ se obtiene que el modelo de $Profile$ se mantiene como el más rapido para realizar las infecciones y que despues lo hace el modelo $Threshold$ de forma más lenta y finalmente el modelo $Profile-Threshold$ el más lento de los tres.
+	\item En la $Figura$ $\ref{fig:f33}$ se puede observar que al fijar los umbrales $\tau = 0.1$ y los valores de los perfiles del nodo $\gamma = 0.8$ se obtiene que el modelo de $Profile$ es superado por el modelo $Threshold$ a pesar de que se aumenta el valor para los perfiles del nodo, donde se estimaría que fuese mayor el $Profile$. El modelo restante se mantiene como el más lento de infección.
+	\item En la $Figura$ $\ref{fig:f34}$ se puede observar que al fijar los umbrales $\tau = 0.2$ y los valores de los perfiles del nodo $\gamma = 0.4$ se obtiene que el modelo de $Profile$ vuelve a superar por mucho al modelo $Threshold$ y este a su vez al $Profile-Threshold$, se aprecia que el modelo $Profile$ es más rapido y los otros tan lentos que no alcanzan a contagiar toda la red.
+	\item En la $Figura$ $\ref{fig:f35}$ se puede observar que al fijar los umbrales $\tau = 0.3$ y los valores de los perfiles del nodo $\gamma = 0.4$ se obtiene que el modelo de $Profile$ contagia a toda la red de forma muy rapida y los modelos restantes no alcanzan ni a poder contagiar el 20\% de esta.
+	\item En la $Figura$ $\ref{fig:f35}$ se puede observar que al fijar los umbrales $\tau = 0.3$ y los valores de los perfiles del nodo $\gamma = 0.4$ se obtiene que el modelo de $Profile$ contagia a toda la red de forma muy rapida y los modelos restantes no alcanzan a contagiar ni al 7\% de la población total, considerando además que el 5\% ya lo estaba, entonces se vuelven más reales al detallar resultados.
+\end{itemize}
+
+
 \begin{figure}[!tbp]
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 a).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 3 a).png}
 		\caption{}
 		\label{fig:f31}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 b).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 3 b).png}
 		\caption{}
 		\label{fig:f32}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 c).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 3 c).png}
 		\caption{}
 		\label{fig:f33}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 d).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 3 d).png}
 		\caption{}
 		\label{fig:f34}
 	\end{subfigure}
 	\hfil
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 e).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 3 e).png}
 		\caption{}
 		\label{fig:f35}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 3 f).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 3 f).png}
 		\caption{}
 		\label{fig:f36}
 	\end{subfigure}
-	\caption{Tendencias de difusión del gráfico Erdós-Renyi. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$.
+	\label{fig:FIG3}
+	\caption{Tendencias de difusión del grafo Wats-Strogatz. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$.
 		\textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2 \textbf{e} $\gamma$ = 0.4, $\tau$ = 0.3 \textbf{f} $\gamma$ = 0.4, $\tau$ = 0.4}
 \end{figure}
 
-\textbf{Gráfico de Facebook}
-\begin{figure}[!tbp]
+\textbf{Grafo de Facebook}
+
+
+En la $Figura$ $6$ se puede apreciar los resultados obtenidos de las tendencias de difusión al aplicar los tres modelos en la red real generada mediante los datos de Facebook. 
+
+\begin{itemize}
+	\item Los resultados que se obtienen son similares a los de los grafos sinteticos, inclusive se puede apreciar como una mezcla de ellos. Por ejemplo, las $Figuras $ \ref{fig:f41}, \ref{fig:f42}, \ref{fig:f43} es muy similar a las $Figuras $ \ref{fig:f1}, \ref{fig:f2}, \ref{fig:f3}. 
+	\item Por el resto, también se puede apreciar que realmente el modelo más lento para realizar el contagio de toda la red es el $Profile-Threshold$.
+\end{itemize}
+
+
+\begin{figure}{c}
+	\label{fig:plot4}
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 a).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 4 a).png}
 		\caption{}
 		\label{fig:f41}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 b).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 4 b).png}
 		\caption{}
 		\label{fig:f42}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 c).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 4 c).png}
 		\caption{}
 		\label{fig:f43}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 d).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 4 d).png}
 		\caption{}
 		\label{fig:f44}
 	\end{subfigure}
 	\hfil
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 e).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 4 e).png}
 		\caption{}
 		\label{fig:f45}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=\textwidth, height=\textwidth]{../Images/Fig 4 f).png}
+		\includegraphics[width=\textwidth]{../Images/Fig 4 f).png}
 		\caption{}
 		\label{fig:f46}
 	\end{subfigure}
-	\caption{Tendencias de difusión del grafo Facebook. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$.\textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2 \textbf{e} $\gamma$ = 0.4, $\tau$ = 0.3 \textbf{f} $\gamma$ = 0.8, $\tau$ = 0.2}
+	\caption{Tendencias de difusión del grafo de Facebook. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$.\textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2 \textbf{e} $\gamma$ = 0.4, $\tau$ = 0.3 \textbf{f} $\gamma$ = 0.8, $\tau$ = 0.2}
 \end{figure}
 
+De las graficas presentadas y especificamente de las últimas dos, correspondiente al grafo de $Facebook$ y $Wats-Strogatz$, se muestra que la difusión con el compartamiento $activo$ se realizan de forma más rapida y el $pasivo$ pasa a la inversa, la tendencia de difusión progresa de forma más lenta. Y en general lo resultados son los esperados, el modelo $Profile$ y $Threshold$ realizan de forma más rapida las tendencias difusión, mientras el $Profile-Threshold$ en las dos primeras redes sinteticas se comportó igual que los demás, es decir, los escenarios $mixto$ y $pasivo$ se comportaron de forma similar; en la red de $Wats-Strogatz$ y $Facebook$ se observó con mejor claridad que el modelo realizaba las tendencias de difusión mucho más lento y por debajo al modelo $Threshold$.
 
+El modelo $Profile-Threshold$ es más lento debido a que primero el nodo tiene que superar el umbral de exposición para poder estar en contacto con la información y posteriormente decidir por su propia cuenta si lo acepta o lo declina, entonces requiere de tener una cantidad de vecinos infectados relativamente alta y posteriormente tener que decidir adquirir la información porque lo desea o es de su agrado. 
 
-
+\newpage
 \textbf{2. Sin inmunización, con adopciones espontáneas.}
 
-En este escenario cae la implementación estándar de los tres métodos; Analizamos redes por separado para caracterizar mejor las diferencias entre los métodos.\\
+Este escenario se simuló aplicando los tres modelos presentados anteriormente en el grafo creado con los datos reales de $Facebook$ y son representados los resultados en mapas de calor, así como se muestra en las $Figuras$: $7$, $8$, $9$. 
+
+\begin{figure}[h]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm01.png}
+		\caption{a = 0}
+		\label{fig:hm01}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm02.png}
+		\caption{p = 0}
+		\label{fig:hm02}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm03.png}
+		\caption{a = 0.01}
+		\label{fig:hm03}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm04.png}
+		\caption{p = 0.1}
+		\label{fig:hm04}
+	\end{subfigure}
+	\label{fig:hm}
+	\caption{Mapas de calor obtenidos al aplicar el modelo $Threshold$, el eje x corresponde a la variable $\tau$ que corresponde a los umbrables del nodo, y en \textbf{a} y \textbf{c} se varia el valor de la probabilidad de inmunización $p$, mientras que en \textbf{b} y \textbf{d} se varia el valor de adopción $a$.}
+\end{figure}
+Cada celda de un mapa de calor representa el porcentaje de nodos infectados al final de una simulación. Si la celda tiene un color azul fuerte esto representa un porcentaje alto y si es color más claro de azul representa un valor bajo.
+\newpage
 
 \textbf{3. Con inmunización, sin adopciones espontáneas.}
 
-En este escenario cae la implementación estándar de los tres métodos; Analizamos redes por separado para caracterizar mejor las diferencias entre los métodos.\\
+En este escenario se agrega el concepto de nodos bloqueados y se ve como los patrones de la difusión cambian. Para las simulaciones, se considera la elección de nodos bloqueados de forma random. Para el modelo de $Profile$ $Figura $ \ref{fig:hm05}, se puede observar que después del mismo período el porcentaje de nodos infectados se reduce a la mitad en comparación con la simulación con $p = 0$, ya que en este escenario se descarta la adopciones espontáneas $a$.
 
+\begin{figure}[h]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm05.png}
+		\caption{a = 0}
+		\label{fig:hm05}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm06.png}
+		\caption{p = 0}
+		\label{fig:hm06}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm07.png}
+		\caption{a = 0.01}
+		\label{fig:hm07}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm08.png}
+		\caption{p = 0.1}
+		\label{fig:hm08}
+	\end{subfigure}
+	\label{fig:hm2}
+	\caption{Mapas de calor obtenidos al aplicar el modelo $Profile$, el eje x corresponde a la variable $\gamma$ que corresponde a los perfiles del nodo, y en \textbf{a} y \textbf{c} se varia el valor de la probabilidad de inmunización $p$, mientras que en \textbf{b} y \textbf{d} se varia el valor de adopción $a$.}
+\end{figure}
+
+\newpage
 \textbf{4. Con inmunización, con adopciones espontáneas.}
 
-En este escenario cae la implementación estándar de los tres métodos; Analizamos redes por separado para caracterizar mejor las diferencias entre los métodos.\\
-
+En este escenario hay variaciones a la variable $p$ correspondiente a la inmutizacion de los nodos (nodos bloqueados) y la variable $a$ que indica las adopciones espontáneas. Se puede observar de las $Figuras: $ \ref{fig:hm03}, \ref{fig:hm04}, \ref{fig:hm07}, \ref{fig:hm08}, \ref{fig:hm11}, \ref{fig:hm12} que cada vez que aumenta el valor de $a$ el porcentaje de nodos infectados también crece, y al inversa sucede cuando el valor de $p$ aumenta, el porcentaje de nodos infectados decrece.
+\begin{figure}[h]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm09.png}
+		\caption{p = 0, a = 0}
+		\label{fig:hm09}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm10.png}
+		\caption{p = 0, a = 0.005}
+		\label{fig:hm10}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm11.png}
+		\caption{p = 0-2, a = 0}
+		\label{fig:hm11}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Images/hm12.png}
+		\caption{p = 0.2, a = 0.005}
+		\label{fig:hm12}
+	\end{subfigure}
+	\label{fig:hm3}
+	\caption{Mapas de calor obtenidos al aplicar el modelo $Profile-Threshold$, el eje x corresponde a la variable $\tau$ que corresponde a los umbrales del nodo y el en eje y se matiene a $\gamma$ que son los perfiles del nodo.}
+\end{figure}
+\newpage
 \section{Conclusiones}
-	Aquí finalizaré cómo fue el trabajo.
+En el trabajo se abordó el problema de actividades en la difusión de información, en el que se simularon diferentes escenarios en el que se pusieron a prueba tres modelos de simulación propuestos que entran en un marco de modelado común. En comparación de los modelos compartimentales (SI, SIR, SIS), el modelo $Threshold$ dado un estado de infección inicial (seed) produce una evolución determinista de la difusión, haciéndole falta un detonador estocástico, la difusión que produce este modelo se puede observar como un modelo $pasivo$ ya que los nodos involucrados no juegan un papel importante al momento de determinar si son o no infectados, es decir, no están con un rol activo. Se puede denotar rápidamente que el modelo $Threshold$ es eficiente para simular redes en las que la presión social es un factor y las preferencias individuales no lo son, es decir, una red donde las personas son influenciadas por el medio que lo rodea.
+
+
+
+Posterior a este modelo, se proponen dos modelos con simulación estocástica que incluyen una participación activa del nodo involucrado, estos modelos son: $Profile$ y $Profile-Threshold$. De las pruebas realizadas con escenarios de $pasivo$ y $activo$ se pudo visualizar como influenciaba cada parámetro a que la tendencia de difusión fuera más rápida o más lenta, entonces al combinar los dos escenarios, se pudo notar que al realizar la simulación los resultados eran más reales, debido a que se consideraba la presión del exterior y los intereses individuales.
+
+
+
+Además en los escenarios propuestos, se agregó la presencia de adoptantes espontáneos (indivudos infectados de por factores exógenos) y también los nodos bloqueados, que estos representaban a individuos que se negaban a adoptar/cambiar de opinión sobre un contenido o ser influenciado, estos parámetros ayudaron a acelerar/amortiguar el proceso de la difusión según los valores que tuvieran. De los dos modelos propuestos, se notó que el más eficiente para realizar la simulación y el que mejores resultados reales presentaba, era el modelo $Profile-Threshold$, que es un modelo con condiciones más fuertes de cumplir y es por ello que se vuelve más complicado de realizar las tendencias de difusión, además que se vuelve más apegado a la realidad; es mejor debido a que considera factores externos al individuo y también los intereses del mismo.
 	
-\section{Referencias}
+	Gracias a este trabajo, se puede apreciar la importancia de la simulación, ya que en base a modelos de este tipo, se puede simular y obtener resultados para poder visualizar el comportamiento de un evento del mundo real. En este caso fue de una red compleja de individuos en la que se difundía información pero de igual forma puede ser aplicado para simular la dispersión de un virus biológico, virus informatico, información, etc. y son de ayuda para poder proyectar resultados a futuro y realizar analisis y en base a estos tomar decisiones. También se notó la importancia que tiene el poder diseñar un modelo eficaz, ya que en nuestro caso el modelo $Threshold$ que habían propuesto hace tiempo, era un modelo que realizaba simulación tipo $determinista$ y entonces los resultados eran poco reales debido a que consideraba menos parametros y su enfoque no era el adecuado, pero al reformular este modelo y proponer nuevos, los resultados que se simulaban era mejores y se veían más reales, debido a que ahora la simulación era de tipo estocástica, entonces es ahí la importancia del poder formular un buen modelo, ya que nuestros resultados pueden no ser los esperados o los correctos y apegados a la realidad.
+	 
+\newpage
 
 \printbibliography
 
