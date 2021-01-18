@@ -26,6 +26,5 @@ hs_err_pid*
 *.out
 *.toc
 *.html
-*.txt
 *.pdf
 *.synctex.gz
