@@ -2,6 +2,8 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{caption}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}  
 \usepackage{subcaption}
 \usepackage[spanish, es-tabla]{babel}
 \renewcommand{\baselinestretch}{1.5}
@@ -323,7 +325,7 @@ En la $Figura$ $3$ se puede apreciar los resultados obtenidos de las tendencias 
 		\caption{}
 		\label{fig:f4}
 	\end{subfigure}
-	\label{fig:FIG1}
+	\label{fig:figure1}
 	\caption{Tendencias de difusión del grafo Barabási-Albert. Tendencias de difusión para los modelos Threshold, ProfileThreshold y Profile con a = 0 y p = 0 y con diferentes valores de $\gamma$ y $\tau$. \textbf{a} $\gamma$ = 0.1, $\tau$ = 0.1 \textbf{b} $\gamma$ = 0.4, $\tau$ = 0.1 \textbf{c} $\gamma$ = 0.8, $\tau$ = 0.1 \textbf{d} $\gamma$ = 0.4, $\tau$ = 0.2}
 \end{figure}
 \newpage
@@ -575,7 +577,8 @@ Posterior a este modelo, se proponen dos modelos con simulación estocástica qu
 Además en los escenarios propuestos, se agregó la presencia de adoptantes espontáneos (indivudos infectados de por factores exógenos) y también los nodos bloqueados, que estos representaban a individuos que se negaban a adoptar/cambiar de opinión sobre un contenido o ser influenciado, estos parámetros ayudaron a acelerar/amortiguar el proceso de la difusión según los valores que tuvieran. De los dos modelos propuestos, se notó que el más eficiente para realizar la simulación y el que mejores resultados reales presentaba, era el modelo $Profile-Threshold$, que es un modelo con condiciones más fuertes de cumplir y es por ello que se vuelve más complicado de realizar las tendencias de difusión, además que se vuelve más apegado a la realidad; es mejor debido a que considera factores externos al individuo y también los intereses del mismo.
 	
 	Gracias a este trabajo, se puede apreciar la importancia de la simulación, ya que en base a modelos de este tipo, se puede simular y obtener resultados para poder visualizar el comportamiento de un evento del mundo real. En este caso fue de una red compleja de individuos en la que se difundía información pero de igual forma puede ser aplicado para simular la dispersión de un virus biológico, virus informatico, información, etc. y son de ayuda para poder proyectar resultados a futuro y realizar analisis y en base a estos tomar decisiones. También se notó la importancia que tiene el poder diseñar un modelo eficaz, ya que en nuestro caso el modelo $Threshold$ que habían propuesto hace tiempo, era un modelo que realizaba simulación tipo $determinista$ y entonces los resultados eran poco reales debido a que consideraba menos parametros y su enfoque no era el adecuado, pero al reformular este modelo y proponer nuevos, los resultados que se simulaban era mejores y se veían más reales, debido a que ahora la simulación era de tipo estocástica, entonces es ahí la importancia del poder formular un buen modelo, ya que nuestros resultados pueden no ser los esperados o los correctos y apegados a la realidad.
-	 
+	
+	Si desea visualizar el proyecto completo, desde el código empleado para la obtención de los resultados y archivos de la documentación, puedes visitar el repositorio en GitHub \cites{git:2020}{Garcia}. 
 \newpage
 
 \printbibliography

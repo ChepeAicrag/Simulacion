@@ -26,8 +26,7 @@ Repeated entry---line 98 of file bibliography.bib
  : @article{ruan:2015
  :                   ,
 I'm skipping whatever remains of this entry
-Warning--entry type for "filtros:2020" isn't style-file defined
---line 180 of file bibliography.bib
+Warning--I didn't find a database entry for "Garcia"
 Biblatex version: 3.15
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Too many commas in name 1 of "Bakshy E, Rosenn I, Marlow C, Adamic L" for entry bakshy:2012
@@ -211,45 +210,45 @@ Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, 
 while executing---line 2813 of file biblatex.bst
 Too many commas in name 1 of "Zhongyuan Ruan, Gerardo Iñiguez, Márton Karsai, János Kertész" for entry ruan:2015
 while executing---line 2813 of file biblatex.bst
-You've used 23 entries,
+You've used 24 entries,
             6393 wiz_defined-function locations,
-            1311 strings with 12256 characters,
-and the built_in function-call counts, 140775 in all, are:
-= -- 8178
-> -- 7283
-< -- 693
-+ -- 6652
-- -- 5434
-* -- 8585
-:= -- 16480
+            1316 strings with 12348 characters,
+and the built_in function-call counts, 147323 in all, are:
+= -- 8563
+> -- 7633
+< -- 724
++ -- 6956
+- -- 5692
+* -- 8991
+:= -- 17236
 add.period$ -- 0
-call.type$ -- 23
-change.case$ -- 170
-chr.to.int$ -- 547
-cite$ -- 44
-duplicate$ -- 11196
-empty$ -- 12468
-format.name$ -- 1005
-if$ -- 25711
+call.type$ -- 24
+change.case$ -- 177
+chr.to.int$ -- 571
+cite$ -- 46
+duplicate$ -- 11684
+empty$ -- 13052
+format.name$ -- 1055
+if$ -- 26920
 int.to.chr$ -- 0
-int.to.str$ -- 45
+int.to.str$ -- 49
 missing$ -- 0
-newline$ -- 556
-num.names$ -- 854
-pop$ -- 7334
+newline$ -- 579
+num.names$ -- 898
+pop$ -- 7664
 preamble$ -- 1
-purify$ -- 242
+purify$ -- 252
 quote$ -- 0
-skip$ -- 3783
+skip$ -- 3961
 stack$ -- 0
-substring$ -- 17106
-swap$ -- 2950
-text.length$ -- 616
+substring$ -- 17932
+swap$ -- 3081
+text.length$ -- 643
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 769
+type$ -- 804
 warning$ -- 0
-while$ -- 1515
+while$ -- 1578
 width$ -- 0
-write$ -- 534
+write$ -- 556
 (There were 91 error messages)

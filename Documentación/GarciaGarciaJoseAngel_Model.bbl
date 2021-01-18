@@ -17,7 +17,7 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
-  \entry{filtros:2020}{misc}{}
+  \entry{filtros:2020}{online}{}
     \name{author}{1}{}{%
       {{hash=GJAG}{%
          family={Garcia},
@@ -565,6 +565,30 @@
     \endverb
     \field{year}{2020}
     \field{urlday}{06}
+    \field{urlmonth}{01}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{git:2020}{online}{}
+    \name{author}{1}{}{%
+      {{hash=GJAG}{%
+         family={Garcia},
+         familyi={G\bibinitperiod},
+         given={Jose Angel\bibnamedelima Garcia},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GJAG1}
+    \strng{fullhash}{GJAG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{GitHub Repository: Simulacion}
+    \verb{url}
+    \verb https://github.com/ChepeAicrag12/Simulacion
+    \endverb
+    \field{year}{2020}
+    \field{urlday}{18}
     \field{urlmonth}{01}
     \field{urlyear}{2021}
   \endentry
