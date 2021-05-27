@@ -19,10 +19,10 @@ Librerías:
 ```
 # Ejecución para visualizar la GUI
 ```python
-python App_Gui.py
+python [App_Gui.py](App_Gui.py)
 ```
 # Ejecución para generar mapas de calor
 ```python
-python MapaCalor.py
+python [MapaCalor.py](MapaCalor.py)
 ```
 

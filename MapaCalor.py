@@ -100,7 +100,6 @@ if  __name__ == "__main__":
     make_hm_par(values_t, values_a, 0.1, 1, nameT4, G)
 
     # Profile
-    
     make_hm_impar(values_y, values_p, 0, 2, nameP1, G)
     make_hm_par(values_y, values_a, 0, 2, nameP2, G)
     make_hm_impar(values_y, values_p, 0.01, 2, nameP3, G)
